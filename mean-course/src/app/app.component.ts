@@ -9,7 +9,7 @@ export class AppComponent {
   storedPosts = [] ;
 
   onPostAdded(post) {
-    alert("POST ADDED");
+    alert('POST ADDED');
     this.storedPosts.push(post);
   }
 }
