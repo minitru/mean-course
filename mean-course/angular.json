@@ -110,11 +110,6 @@
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
             "devServerTarget": "mean-course:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "mean-course:serve:production"
-            }
           }
         },
         "lint": {
