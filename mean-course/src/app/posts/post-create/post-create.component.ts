@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 import { PostsService } from '../posts.service';
 import { Post } from '../post.model';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { SELECT_PANEL_INDENT_PADDING_X } from '@angular/material';
 
 
 @Component({
@@ -16,6 +17,7 @@ export class PostCreateComponent implements OnInit {
   enteredTitle = '';
   enteredContent = '';
   post: Post;
+  isLoading = false;
 
   private mode = 'create';
   private postId: string;
@@ -28,7 +30,9 @@ export class PostCreateComponent implements OnInit {
         console.log('calling ngoninit-edit');
         this.mode = 'edit';
         this.postId = paramMap.get('postId');
+        this.isLoading = true;
         this.postsService.getPost(this.postId).subscribe( postData => {
+          this.isLoading = false;
           this.post = {id: postData.id, title: postData.title, content: postData.content };
         });
       } else {
@@ -43,6 +47,7 @@ export class PostCreateComponent implements OnInit {
     if (form.invalid) {
       return;
     }
+    this.isLoading = true;
     if (this.mode === 'create') {
       this.postsService.addPost(form.value.title, form.value.content);
     } else {
