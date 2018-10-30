@@ -3,6 +3,10 @@ textarea {
   width: 100%;
 }
 
-mat-spinner{
+mat-spinner {
   margin: auto;
+}
+
+input[type="file"] {
+  visibility: hidden;
 }
