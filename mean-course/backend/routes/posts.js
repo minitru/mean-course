@@ -1,8 +1,31 @@
 const express = require('express');
 const router = express.Router();
 const Post = require('../models/post');
+const multer = require('multer');
 
-router.post('', (req, res, next) => {
+const MIME_TYPE_MAP = {
+  'image/png': 'png',
+  'image/jpeg': 'jpg',
+  'image/jpg': 'jpg'
+};
+
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    const isValid = MIME_TYPE_MAP[file.mimetype];
+    let error = new Error('Invalid MIME type');
+    if (isValid) {
+      error = null;
+    }
+    cb(error, 'backend/images');
+  },
+  filename: (req, file, cb) => {
+    const name = file.originalname.toLowerCase();
+    const ext = MIME_TYPE_MAP[file.mimetype];
+    cb(null, name + '-' + Date.now() + '.' + ext);
+  }
+});
+
+router.post('', multer({storage, storage}).single('image'), (req, res, next) => {
   const post = new Post({
     title: req.body.title,
     content: req.body.content
@@ -12,16 +35,21 @@ router.post('', (req, res, next) => {
     console.log("ADDED POST: " + createdPost._id + " " + req.body.title + " " + req.body.content);
     res.status(201).json({
       message: 'posts entered ok',
-      postId: createdPost._id
+      post: {
+        ...createdPost,   // COPIES ALL FIELDS OVER
+        id: createdPost._id   // THEN MODIFY THE ONE YOU WANT TO CHANGE
+      }
     });
   });
 });
 
 router.put('/:id', (req, res, next) => {
+  const url = req.protocol + '://' + req.get('host');
   const post = new Post({
     _id: req.params.id,
     title: req.body.title,
-    content: req.body.content
+    content: req.body.content,
+    imagePath: url + '/images/' + req.file.filename
   });
   Post.updateOne({_id: req.body.id}, post).then(result => {
     console.log("UPDATE POST: " + req.params.id + " " + req.body.title + " " + req.body.content);
