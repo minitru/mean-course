@@ -34,14 +34,19 @@ export class PostCreateComponent implements OnInit {
 
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
       if (paramMap.has('postId')) {
-        console.log('calling ngoninit-edit');
         this.mode = 'edit';
         this.postId = paramMap.get('postId');
+        console.log('calling ngoninit-edit ' + this.postId);
         this.isLoading = true;
         this.postsService.getPost(this.postId).subscribe( postData => {
           this.isLoading = false;
+          // SMM THERE IS A PROBLEM WITH id - COURSE CALLS IT _id AND I'VE MISSED SOMETHING SOMEWHERE
           this.post = {id: postData.id, title: postData.title, content: postData.content, imagePath: null };
-          this.form.setValue({});
+          this.form.setValue({
+            title: this.post.title,
+            content: this.post.content,
+            image: this.post.imagePath
+          });
         });
       } else {
         console.log('calling ngoninit-create');

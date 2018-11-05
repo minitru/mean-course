@@ -16,6 +16,6 @@ input[type="file"] {
   margin: 1rem 0;
 }
 
-.image-preview.img {
-  height: 100%;
+.image-preview img {
+  width: 25%;
 }
