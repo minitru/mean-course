@@ -45,7 +45,8 @@ router.post('', multer({storage, storage}).single('image'), (req, res, next) => 
   });
 });
 
-router.put('/:id', (req, res, next) => {
+router.put('/:id', multer({storage, storage}).single('image'), (req, res, next) => {
+  console.log('req.file');
   const url = req.protocol + '://' + req.get('host');
   const post = new Post({
     _id: req.params.id,

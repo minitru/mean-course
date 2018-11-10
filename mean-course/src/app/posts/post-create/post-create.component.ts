@@ -36,20 +36,28 @@ export class PostCreateComponent implements OnInit {
       if (paramMap.has('postId')) {
         this.mode = 'edit';
         this.postId = paramMap.get('postId');
-        console.log('calling ngoninit-edit ' + this.postId);
+        console.log('EDIT MODE ' + this.postId);
         this.isLoading = true;
         this.postsService.getPost(this.postId).subscribe( postData => {
+          // IMAGE FILE IS NULL HERE - THAT'S THE PROBLEM - FIX IT AND THINGS WILL BE BETTER
+          console.log('GOT POST: ' + postData.title + ' ' + postData.image);
           this.isLoading = false;
           // SMM THERE IS A PROBLEM WITH id - COURSE CALLS IT _id AND I'VE MISSED SOMETHING SOMEWHERE
-          this.post = {id: postData.id, title: postData.title, content: postData.content, imagePath: null };
+          this.post = {id: postData.id, title: postData.title, content: postData.content, imagePath: postData.image };
           this.form.setValue({
             title: this.post.title,
             content: this.post.content,
-            image: this.post.imagePath
+            // THIS NEXT LINE BREAKS EDITING BADLY
+            // THROWS AN ERROR BECAUSE THIS IS UNSET - SO IT MAY BE TOTALLY WRONG
+            // image: this.post.imagePath
+            // SETTING IMAGE TO NULL WORKS FINE
+            image: ''
           });
+          this.imagePreview = this.post.imagePath;  // SMM TEST
+          console.log('IMAGE ' + postData.image + ' ' + postData.title);
         });
       } else {
-        console.log('calling ngoninit-create');
+        console.log('*** CREATE POST');
         this.mode = 'create';
         this.postId = null;
       }
@@ -78,7 +86,7 @@ export class PostCreateComponent implements OnInit {
       this.postsService.addPost(this.form.value.title, this.form.value.content, this.form.value.image);
     } else {
       console.log(this.form.value.title + ' ' + this.form.value.content);
-      this.postsService.updatePost(this.postId, this.form.value.title, this.form.value.content);
+      this.postsService.updatePost(this.postId, this.form.value.title, this.form.value.content, this.form.value.image);
     }
     this.form.reset();
   }

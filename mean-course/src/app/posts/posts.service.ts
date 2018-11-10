@@ -32,11 +32,13 @@ export class PostsService {
   }
 
   getPostUpdateListener() {
+    console.log('TRIGGERED GETPOSTLISTENER');
     return this.postsUpdated.asObservable();
   }
 
   getPost(id: string) {
-    return this.http.get<{id: string, title: string, content: string}>('http://localhost:3000/api/posts/' + id);
+    console.log('CALLING GETPOST: ' + id);
+    return this.http.get<{id: string, title: string, content: string, image: string }>('http://localhost:3000/api/posts/' + id);
   }
 
   addPost(title: string, content: string, image: File) {
@@ -60,13 +62,26 @@ export class PostsService {
     });
   }
 
-  updatePost(id: string, title: string, content: string) {
-    const post: Post = {id: id, title: title, content: content,  imagePath: null};
-    console.log('UPDATEPOST ' + post.id + ' ' + post.title + ' ' + post.content);
-    this.http.put('http://localhost:3000/api/posts/' + id, post)
+  updatePost(id: string, title: string, content: string, image: File | string ) {
+    console.log('CALLING UPDATEPOST');
+    let postData: Post | FormData;
+    if (typeof(image) === 'object') {
+      console.log('ITS AN OBJECT');
+      postData = new FormData();
+      postData.append('title', title);
+      postData.append('content', content);
+      postData.append('image', image, title);
+    } else {
+      console.log('NOT AN OBJECT - STRING');
+      // IT'S A STRING, SO JUST UPDATE THE JSON
+      postData = { id: id, title: title, content: content, imagePath: image };
+    }
+
+    this.http.put('http://localhost:3000/api/posts/' + id, postData)
     .subscribe(response => {
       const updatedPosts = [...this.posts];
-      const oldPostIndex = updatedPosts.findIndex(p => p.id === post.id);
+      const oldPostIndex = updatedPosts.findIndex(p => p.id === id);
+      const post: Post = { id: id, title: title, content: content, imagePath: '' };
       updatedPosts[oldPostIndex] = post;
       this.posts = updatedPosts;
       console.log('GOT RESPONSE FROM UPDATEPOST ' + oldPostIndex);
@@ -76,6 +91,7 @@ export class PostsService {
   }
 
   deletePost(postId: string) {
+    console.log('HIT DELETEPOST');
     this.http.delete('http://localhost:3000/api/posts/' + postId)
     .subscribe(() => {
       const updatedPosts = this.posts.filter(post => post.id !== postId);
