@@ -3,12 +3,12 @@
   margin-top: 1rem;
 }
 
-.info-text {
-  text-align: center;
-}
-
 mat-spinner {
   margin: auto;
+}
+
+.info-text {
+  text-align: center;
 }
 
 .post-image {
@@ -16,6 +16,6 @@ mat-spinner {
 }
 
 .post-image img {
-  width: 25%;
-  box-shadow: 5px 5px 5px rgba(26, 25, 25, 0.5);
+  width: 100%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }

@@ -17,5 +17,5 @@ input[type="file"] {
 }
 
 .image-preview img {
-  width: 25%;
+  height: 100%;
 }
