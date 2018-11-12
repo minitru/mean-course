@@ -6,5 +6,8 @@
 		{
 			"path": "mean-course/backend"
 		}
-	]
+	],
+	"settings": {
+		"editor.tabCompletion": "on"
+	}
 }
