@@ -13,7 +13,7 @@ export const mimeType = (
     (observer: Observer<{ [key: string]: any }>) => {
       fileReader.addEventListener('loadend', () => {
         let header = '';
-        let isVaAlid = false;
+        let isValid = false;
         // TYPESCRIPT TROUBLE - CAST fileReader.result as ArrayBuffer
         const arr = new Uint8Array(<ArrayBuffer>fileReader.result).subarray(0, 4);
         for (let i = 0; i < arr.length; i++) {
