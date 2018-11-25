@@ -14,6 +14,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
   constructor(private authService: AuthService) {}
 
   ngOnInit() {
+    // CALLING THIS BECAUSE OF A TIMING ISSUE - CHECKING AUTH HAPPENS BEFORE THE HEADER IS LOADED
+    // SO WE'RE LOGGED IN BUT THE HEADER DOESN'T THINK SO...
+    this.userIsAuthenticated = this.authService.getIsAuth();
     this.authListenerSubs = this.authService.getAuthStatusListener().subscribe(isAuthenticated => {
       this.userIsAuthenticated = isAuthenticated;
     });
