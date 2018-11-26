@@ -45,11 +45,13 @@ export class PostsService {
   }
 
   getPost(id: string) {
-    return this.http.get<{ _id: string, title: string, content: string, imagePath: string }>(
+    return this.http.get<{ _id: string, title: string, content: string, imagePath: string, creator: string }>(
       'http://localhost:3000/api/posts/' + id
     );
   }
 
+  // THERE'S A BUG HERE - EDIT AND DELETE BUTTONS DON'T
+  // SHOW BECAUSE creator NOT SET UNTIL IT HITS THE SERVER
   addPost(title: string, content: string, image: File) {
     const postData = new FormData();
     postData.append('title', title);
@@ -78,7 +80,8 @@ export class PostsService {
         id: id,
         title: title,
         content: content,
-        imagePath: image
+        imagePath: image,
+        creator: null
       };
     }
     this.http
