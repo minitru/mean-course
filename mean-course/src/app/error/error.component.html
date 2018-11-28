@@ -1,2 +1,7 @@
-<H1>An Error Occurred</H1>
-{{ message }}
+<H1 mat-dialog-title>An Error Occurred</H1>
+<div  mat-dialog-content>
+<P class=mat-body-1> {{ data.message }} </P>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>dismiss</button>
+</div>

@@ -51,6 +51,11 @@ router.post(
           id: createdPost._id
         }
       });
+    })
+   .catch(err => {
+     res.status(500).json({
+      message: 'Post failed'
+     })
     });
   }
 );
@@ -80,6 +85,11 @@ router.put(
       } else {
         res.status(401).json({ message: "Update Permission Denied!" });
       }
+    })
+    .catch(error => {
+      res.status(500).json({
+        message: 'Server error - couldn\'t update post'
+      });
     });
   }
 );
@@ -102,8 +112,11 @@ router.get("", (req, res, next) => {
       message: "Posts fetched successfully!",
       posts: fetchedPosts,
       maxPosts: count
-    });
-  });
+    })
+    .catch(err => {
+      res(500).json({message: 'Server error - can\t fetch posts'})
+    })
+  })
 });
 
 router.get("/:id", (req, res, next) => {
@@ -113,7 +126,10 @@ router.get("/:id", (req, res, next) => {
     } else {
       res.status(404).json({ message: "Post not found!" });
     }
-  });
+  })
+  .catch(err => {
+    res(500).json({message: 'Server error - can\t find posts'})
+  })
 });
 
 router.delete("/:id", checkAuth, (req, res, next) => {
@@ -124,7 +140,10 @@ router.delete("/:id", checkAuth, (req, res, next) => {
     } else {
      res.status(401).json({ message: "Update Permission Denied!" });
     }
-  });
+  })
+  .catch(err => {
+    res(500).json({message: 'Server error - can\t delete posts'})
+  })
 });
 
 module.exports = router;

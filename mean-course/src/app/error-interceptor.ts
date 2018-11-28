@@ -19,10 +19,11 @@ export class ErrorInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler ) {
     return next.handle(req).pipe(
       catchError((error: HttpErrorResponse) => {
-        console.log(error);
-        // MONGOOSE ADDS ANOTHER LEVEL OF ERROR FOR THIS INSANITY
-        // alert(error.error.error.message);
-        this.dialog.open(ErrorComponent);
+        let errorMessage = "An unknown error has occurred...";
+        if (error.error.message) {
+            errorMessage = error.error.message;
+        }
+        this.dialog.open(ErrorComponent, {data: { message: errorMessage }} );
         return throwError(error);
       })
     );
