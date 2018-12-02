@@ -7,7 +7,9 @@ const userRoutes = require('./routes/user');
 
 const app = express();
 
-mongoose.connect("mongodb://dev.maclawran.ca/node-angular?retryWrites=true")
+// console.log(process.env.MONGODB);
+
+mongoose.connect(process.env.MONGODB)
   .then(() => {
     console.log('Connected to mongo OK');
   })

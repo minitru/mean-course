@@ -1,0 +1,7 @@
+{
+  "env": {
+    "MONGO_PASSWD": "",
+    "JWT_KEY": "secret_this_should_be_longer",
+    "MONGODB": "mongodb://dev.maclawran.ca/node-angular?retryWrites=true"
+  }
+}

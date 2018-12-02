@@ -44,7 +44,8 @@ exports.createUser = (req, res, next) => {
         });
       }
       const token = jwt.sign({ email: fetchedUser.email, userId: fetchedUser._id },
-        'secret_this_should_be_longer',
+        // ENV VARIABLES LIVE IN nodemon.json FILE IN env ARRAY
+        process.env.JWT_KEY,
         { expiresIn: '1h' }
       );
       console.log(token);

@@ -71,9 +71,9 @@ exports.getPosts = (req, res, next) => {
       posts: fetchedPosts,
       maxPosts: count
     })
-    .catch(err => {
-      res(500).json({message: 'Server error - can\t fetch posts'})
-    })
+  })
+  .catch(err => {
+    res(500).json({message: 'Server error - can\t fetch posts'})
   })
 }
 
