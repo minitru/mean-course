@@ -2,9 +2,6 @@
 	"folders": [
 		{
 			"path": "mean-course"
-		},
-		{
-			"path": "mean-course/backend"
 		}
 	],
 	"settings": {
