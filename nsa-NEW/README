@@ -1,0 +1,42 @@
+What sort of input do we need?
+
+- Invite the bot to a channel
+    https://maclawran.slack.com/ - 
+    Update the local hash table with GROUPID:GROUPNAME
+    create channel WITH THE SAME NAME AS THE URL /maclawran/messages/ABABABABA
+
+    When it receives a message from slack, lookup the GROUPID from the hash table
+    i.e (XYXYXY -> general -> publish to maclawran/messages/ABABABAABA)
+
+- Other slack invites the bot to their channel
+    Same as above with different name: other/general
+
+- tell NSA to link to a remote channel
+    @nsa link https://other.slack.com/general
+    subscribes to this channel and passes incoming messages to slack/generalA
+
+- tell NSA to unlink a remote channel
+  @nsa unlink channel
+
+PERMISSIONS
+    EITHER A SHARED SECRET OR A CHECKLIST
+
+LIMITS
+    YOU CAN LINK AS MANY AS YOU WANT BUT ONLY THE FIRST INSTANCE WILL BE FOUND
+    (THERE ARE DUPLICATES IN THE QUEUE)
+
+    TECHNICALLY THERE'S NO REASON WE COULDN'T HAVE MULTIPLE CHANNELS ATTACHED TO A SINGLE CHANNEL
+    THIS MAY OR MAY NOT WORK - NEED TO CHECK
+    ALL WE'D REALLY HAVE TO DO IS LOOP THROUGH THE RESULTS AND ADD SUBSCRIPTIONS
+
+    @nsa link URL
+    @nsa unlink URL
+    @nsa show-links
+
+
+
+=========================================================
+IT'S CLOSE - INBOUND AND OUTBOUND ARE CONFUSED RIGHT NOW
+=========================================================
+
+We're not listening on the right stuff...

@@ -1,0 +1,3090 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<!--<title>Monroe County Sheriff's Office - Florida Keys</title>-->
+	<title>M.C.S.O. - Current Arrests</title>
+	<!-- <link rel='shortcut icon' type='image/ico' href='/images/sostar.ico'> -->
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Following for app Smart Banner -->
+    <meta name="smartbanner:title" content=“Monroe County (FL) Sheriff's Office”>
+    <meta name="smartbanner:author" content=“MCSO”>
+    <meta name="smartbanner:price" content="FREE">
+    <meta name="smartbanner:price-suffix-apple" content=" - On the App Store">
+    <meta name="smartbanner:price-suffix-google" content=" - In Google Play">
+    <meta name="smartbanner:icon-apple" content="/images/monroeSheriff.png">
+    <meta name="smartbanner:icon-google" content="/images/monroeSheriff.png"> 
+    <meta name="smartbanner:button" content="View">
+    <meta name="smartbanner:button-url-apple" content="https://itunes.apple.com/us/app/monroe-county-sheriffs-office/id794698931?mt=8">
+    <meta name="smartbanner:button-url-google" content="https://play.google.com/store/apps/details?id=com.ocv.monroecountysheriff">
+    <meta name="smartbanner:enabled-platforms" content="android,ios">
+
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1231336-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'UA-1231336-1');
+	</script>
+
+	<!-- <link rel="stylesheet" type="text/css" href="/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!--<link rel="stylesheet" type="text/css" href="/fontawesome-all.min.css">-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<!--<link rel="stylesheet" type="text/css" href="/css/slideshow.css">-->
+	<link rel="stylesheet" type="text/css" href="/css/smartbanner.css">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<!-- 	<script src="/jquery-3.3.1.min.js"></script>
+	<script src="/popper.min.js"></script>
+	<script src="/bootstrap.min.js"></script>
+ -->	
+ 	<!-- <script src="/jquery.backstretch.min.js"></script> -->
+	<script async src='https://www.google.com/recaptcha/api.js'></script>
+	<script async type="text/javascript" src="/socket.io.js"></script>
+	<script async type="text/javascript" src="/smartbanner.js"></script>
+
+	
+</head>
+<body>
+	<a href="#alertBar" class="skip">Skip To Content</a>
+
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<!--<div class="container" id="nav-container">-->
+		<!--<a class="navbar-brand" href="/"><img src="/images/MONROE Star from vehicles small.jpg" alt="SO Star"></a>-->
+		<a class="navbar-brand" href="/" aria-label="Home"><i class="fas fa-home"></i></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown active">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					About
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="/about">About the MCSO</a>
+						<a class="dropdown-item" href="/ethics">Code of Ethics</a>
+						<a class="dropdown-item" href="/locations">Locations</a>
+						<a class="dropdown-item" href="/accreditation">Accreditation</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/fallen">Fallen Deputies</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/genOrds">General Orders</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/sheriff">About Sheriff Ramsay</a>
+						<a class="dropdown-item" href="/who">Command/Executive staff</a>
+						<a class="dropdown-item" href="/directory">Full Personnel Directory</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/careers">Career Information</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/farm">Animal Farm</a>
+						<a class="dropdown-item" href="/calendar">Upcoming Events Calendar</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown active">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					How do I?...
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="/graffiti">Report Graffiti</a>
+						<a class="dropdown-item" href="/complaint">Report a Concern or Anonymous Tip</a>
+						<a class="dropdown-item" href="/recordsRequest">Request a Report or Public Record</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="http://www.fdle.state.fl.us/Seal-and-Expunge-Process/Seal-and-Expunge-Home.aspx" target="_blank">Seal and Expunge an Arrest Record (Link to F.D.L.E.)</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/commend">Commend a Member</a>
+						<a class="dropdown-item" href="/ia">Make a Complaint Against a Member</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/civil">File or Track Civil Papers</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/comment">Leave a General Comment</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/finger">Get My Fingerprints</a>
+						<a class="dropdown-item" href="/drugDrop">Dispose of Prescription Drugs</a>
+						<a class="dropdown-item" href="/careers">Apply for a Job</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown active">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Arrest/Call Information
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<li><a class="dropdown-item" href="/arrests">Current Arrests</a></li>
+						<li><a class="dropdown-item" href="/arrestQintro">Arrest Search</a></li>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/calls">Active Calls</a>
+						<a class="dropdown-item" href="/callLog1">7-Day Service Call Logs</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="warrantsA">Active Warrants</a>
+					</ul>		        
+				</li>
+				<li class="nav-item dropdown active">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		        	Inmate Information
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="/jailog">Current Inmates</a>
+						<a class="dropdown-item" href="/releases">Inmates Released in Last 7 Days</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/jailVisit">Inmate Visitation, Phones & Accounts</a>
+						<a class="dropdown-item" href="/jailRules">Inmate Guidelines</a>
+					</ul>		        	
+				</li>
+				<li class="nav-item dropdown active">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					General Information
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="/victims">Victim Resources/Advocates</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/wrapUp">Current Weekly Rap Up</a>
+						<a class="dropdown-item" href="/crimeRep">Crime Reports</a>
+						<a class='dropdown-item' href="/annualRep">2017 Annual Report</a>
+						<a class="dropdown-item" href="/foundProp">Found/Abandoned Property</a>
+						<a class="dropdown-item" href="/saff">2019 SAFF Grant Application</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/tourist">Tourist Information</a>
+						<a class="dropdown-item" href="/links">Helpful Resources</a>
+					</ul>		        	
+				</li>
+			</ul>
+		<form class="form-inline" action="/searchResults">
+			<input class="form-control mr-sm-2" type="search" name="q" aria-label="Search Keysso.net" placeholder="Search">
+			<button class="btn btn-outline-secondary btn-sm my-2 my-sm-0" type="submit">Search</button>
+		</form>
+	</div>
+	<div class="ml-auto">
+		<span class="navbar-text" id="D911">
+			<strong>In an Emergency Dial: 911</strong>&nbsp;
+		</span>
+		<span class="navbar-text" id="non911">
+			<strong>Non-Emergency<br>(305) 289-2351</strong>
+		</span>
+	</div>
+	</nav>
+
+	<div class="container" id="alertBar">
+		
+		
+	</div>
+
+
+<div class="container">
+    <header class="jumbotron text-center">
+        <h2>Arrests by Date as of: Tuesday, December 04, 2018 at 03:00</h2>
+        <h5><img src="/images/HRstar.png" alt="MCSO Star"></h5>
+        <p><h3>
+            Remember: The people shown on these pages have been arrested, but <span id="arrest-notguilty">have not been found guilty in a court of law</span>.
+        </p>
+        <p>
+            For case dispositions, and for detailed information on criminal and civil court cases,
+            <br>visit the <a href='http://www.clerk-of-the-court.com/' target="_blank">Monroe County Clerk of the Courts web site</a>. 
+            <br>For information on court dates and judges calendars, visit the <a href='http://www.keyscourts.net/' target="_blank">16th Judicial State Courts web site</a>.
+        </h3></p>
+        <p><h3>
+            <a href="/complaint">Click here to leave an concern or anonymous tip via this website.</a>
+            <br>Or<br>
+            <a href='http://FloridaKeysCrimeStoppers.com' target="_blank">Click this line to submit an anonymous tip via Florida Keys Crime Stoppers.</a>
+        </h3></p>
+        <!--<p><h3>-->
+        <!--    <a HREF='https://www.keysso.net/arrests/ads/attorneys.htm'>List of Attorneys</a>-->
+        <!--    <a HREF='https://www.keysso.net/arrests/ads/bondsmen.htm'>List of Bondsmen</a>-->
+        <!--</h3></p>-->
+        <p>First on this page are the most wanted in Monroe County. <a href="#currArrests">The current arrests follow underneath.</a></p>
+        <p>Click on any image to open a larger photo.</p>
+        <p>
+            <a href="/attorneyAds">List of Attorneys</a>
+            <a href="/bondAds">List of Bondsmen</a>
+        </p>
+    </header>
+
+    <section class="row" id="mostWanted">
+        <div class="col col-lg-12 text-center">
+            <h3>Most Wanted in Monroe County</h3>
+
+            <div class="card-deck">
+<!--                 <div class="card">
+                    <img class="card-img-top img-fluid" src="/images/wanted/jesse_barnett.jpg" alt="Jesse Barnett">
+                    <div class="card-body">
+                        <h6 class='card-title'>Jesse Barnett</h6>
+                        <p class='card-text'>
+                            Jesse Barnett, 30, last known address in Marathon. Wanted for failure to appear in court reference two felony probation violations.
+                            <br>
+                            Bond: None
+                        </p>
+                    </div>
+                </div>                
+ -->                <div class="card">
+                    <img class="card-img-top img-fluid" src="/images/wanted/ayala_pedro.jpg" alt="Pedro Ayala">
+                    <div class="card-body">
+				        <h6 class='card-title'>Pedro Gabriel Ayala</h6>
+				        <p class='card-text'>
+                            Pedro Gabriel Ayala, 23, last known address in North Lauderdale, FL. Wanted for failure to appear in court reference driving with license suspended - third or subsequent offense and possesion of cocaine.
+                            <br>
+                            Bond: $170,000
+				        </p>
+				    </div>
+				</div>
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="/images/wanted/myers_matthew.jpg" alt="Matthew Myers">
+                    <div class="card-body">
+				        <h6 class='card-title'>Matthew Myers</h6>
+				        <p class='card-text'>
+                            Matthew Myers, 24, last known address in Key West. Wanted for failure to appear in court reference drug charges, resisting arrest and trespassing.
+                            <br>
+                            Bond: $145,000
+				        </p>
+				    </div>
+                </div>
+            </div>
+            <div class="card-deck">
+                
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="/images/wanted/porter_jack.jpg" alt="Jack Porter">
+                    <div class="card-body">
+				        <h6 class='card-title'>Jack Kiplan Porter</h6>
+				        <p class='card-text'>
+                            Jack Kiplan Porter, 50, last known address in Hobe Sound FL, wanted for failure to appear in court reference battery on an officer, firefighter or EMT and obstruction.
+                            <br>
+                            Bond: $100,000
+				        </p>
+				    </div>
+                </div>
+
+
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="/images/wanted/elrod_jamie.jpg" alt="Jamie Elrod">
+                    <div class="card-body">
+                        <h6 class='card-title'>Jamie Elrod</h6>
+                        <p class='card-text'>
+                            Jamie Elrod, 42, last known address in Tavernier. Wanted for failure to appear in court reference aggravated assault with a deadly weapon.
+                            <br>
+                            Bond: $50,000
+                        </p>
+                    </div>
+                </div>
+<!--                 
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="/images/wanted/nash_johnny.jpg" alt="Johnny Nash">
+                    <div class="card-body">
+				        <h6 class='card-title'>Johnny Nash</h6>
+				        <p class='card-text'>
+                            Johnny Nash, 49, last known address in Homestead. Wanted for violation of probation ref. drug related charges.
+                            <br>
+                            No Bond Allowed
+				        </p>
+				    </div>
+                </div>
+ -->                
+            </div>
+        </div>
+    </section>
+      
+    <button onclick="scrollToTop(1000);" id="topBtn" title="Go to top"><i class="fas fa-arrow-up"></i><br>Go to top</button>
+    
+    <section id="currArrests">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h4>Quick Links</h4>
+                <a class="btn home-btn-arrests" href="/complaint" role="button"><i class="fas fa-file-invoice"></i><br>Report<br>Concern or Tip</a>
+                <a class="btn home-btn-arrests" href="/calls"role="button"><i class="fas fa-phone-volume"></i><br>Calls<br>& Traffic</a>
+                <a class="btn home-btn-arrests" href="/warrantsA" role="button"><i class="fas fa-binoculars"></i><br>Active<br>Warrants</a>
+                <a class="btn home-btn-arrests" href="/careers" role="button"><i class="fas fa-handshake"></i><br>MCSO<br>Careers</a>
+                <a class="btn home-btn-arrests" href="/directory" role="button"><i class="fas fa-address-book"></i><br>Personnel<br>Directory</a>
+                <a class="btn home-btn-arrests" href="/graffiti" role="button"><i class="fas fa-spray-can"></i><br>Report<br>Graffiti</a>
+                <a class="btn home-btn-arrests" href="/jailog" role="button"><i class="fas fa-lock"></i><br>Current<br>Inmates</a>
+                <a class="btn home-btn-arrests" href="/farm" role="button"><i class="fas fa-dove"></i><br>Animal<br>Farm</a>
+                <a class="btn home-btn-arrests" href="/calendar" role="button"><i class="far fa-calendar-alt"></i><br>Upcoming<br>Events</a>
+             </div>
+        </div>
+    
+        <div class="row">
+            <div class="col col-md-12 text-center">
+                <h3>Arrests for the Last Seven Days</h3>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug1L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug1.jpg" alt="COCUZZA, CHARLES  Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>COCUZZA, CHARLES </strong></span> was arrested on <strong>12/04/2018</strong> at <strong>00:15</strong></li>
+                    <li>Date of Birth: <strong>05/20/1995</strong> Age: <strong>23</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>7690 FARRAGUT ST, HOLLYWOOD, FL 33024</strong></li>
+                    <li>Occupation: <strong>UNEMPLOYED</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>ANILUS, ST PIERRE - </strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug2L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug2.jpg" alt="URISTA, JOSEPH PATRICK Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>URISTA, JOSEPH PATRICK</strong></span> was arrested on <strong>12/04/2018</strong> at <strong>00:30</strong></li>
+                    <li>Date of Birth: <strong>01/15/1981</strong> Age: <strong>37</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>29677 CONSTITUTION AVE, BIG PINE KEY, FL 33043</strong></li>
+                    <li>Occupation: <strong>None</strong></li>
+                    <li>Arrest Location: <strong> FLAGLER AVE, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>KWPD18OFF006826</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 316.193.1 DUI-UNLAW BLD ALCH - DUI ALCOHOL OR DRUGS</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>Unknown at this time</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col col-md-12">
+                <h5><img src="/images/HRstar.png" alt="MCSO Star"></h5>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug3L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug3.jpg" alt="CASTILLO BARBOZA, ENDER MANUEL Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>CASTILLO BARBOZA, ENDER MANUEL</strong></span> was arrested on <strong>12/03/2018</strong> at <strong>17:54</strong></li>
+                    <li>Date of Birth: <strong>01/18/1990</strong> Age: <strong>28</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong> , ,  </strong></li>
+                    <li>Occupation: <strong>CONSTRUCTION</strong></li>
+                    <li>Arrest Location: <strong> US-1 13.5 MM, SADDLEBUNCHES</strong></li>
+                    <li>Arresting Officer/Agency: <strong>DERY, DENISE - MCSO - DIST 1 ROAD PATROL</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD159236</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008829</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 322.34.2b MOVING TRAFFIC VIOL - DRIVE WHILE LIC SUSP 2ND OFF</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug4L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug4.jpg" alt="JONES, CAYLA TYRE Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>JONES, CAYLA TYRE</strong></span> was arrested on <strong>12/03/2018</strong> at <strong>05:50</strong></li>
+                    <li>Date of Birth: <strong>08/22/1993</strong> Age: <strong>25</strong> Gender: <strong>F</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>140 SUNSET LN, TAVERNIER, FL 33070</strong></li>
+                    <li>Occupation: <strong>STUDENT in KEY LARGO</strong></li>
+                    <li>Arrest Location: <strong>97950 OVERSEAS HWY, KEY LARGO</strong></li>
+                    <li>Arresting Officer/Agency: <strong>TORRES, JOEL - MCSO - ROAD PATROL - SECTOR 7</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD158967</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008814</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Felony Count(s) of 893.13.6a COCAINE-POSSESS - POSSESS COCAINE</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/18/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug5L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug5.jpg" alt="KOVAL, JAMIE ALLAN Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>KOVAL, JAMIE ALLAN</strong></span> was arrested on <strong>12/03/2018</strong> at <strong>20:12</strong></li>
+                    <li>Date of Birth: <strong>08/15/1987</strong> Age: <strong>31</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>3871 GEORGE RD/30 MM GU, BIG PINE KEY, FL 33043</strong></li>
+                    <li>Occupation: <strong>LANDSCAPER in BIG PINE KEY</strong></li>
+                    <li>Arrest Location: <strong>29337 COCONUT PALM DR, BIG PINE KEY</strong></li>
+                    <li>Arresting Officer/Agency: <strong>STEELE, SHAWN - MCSO - DIST 1 ROAD PATROL</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD159273</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008830</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 784.03.1a1 BATTERY - TOUCH OR STRIKE</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug6L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug6.jpg" alt="LEBOEUF, DEBRA ANN Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>LEBOEUF, DEBRA ANN</strong></span> was arrested on <strong>12/03/2018</strong> at <strong>23:37</strong></li>
+                    <li>Date of Birth: <strong>10/16/1961</strong> Age: <strong>57</strong> Gender: <strong>F</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>2080 RIVER REACH DR, NAPLES, FL 34104</strong></li>
+                    <li>Occupation: <strong>NURSE in TAVNIER</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, STOCK ISLAND</strong></li>
+                    <li>Arresting Officer/Agency: <strong>FELIPE, ANARAY CORZO - MCSO - KEY WEST CORRECTIONS C WATCH</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 903.0471 CONDIT RELEASE VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>Unknown at this time</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug7L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug7.jpg" alt="TINGLEY, MELISSA ANN Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>TINGLEY, MELISSA ANN</strong></span> was arrested on <strong>12/03/2018</strong> at <strong>01:57</strong></li>
+                    <li>Date of Birth: <strong>04/27/1982</strong> Age: <strong>36</strong> Gender: <strong>F</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>1409 4 ST, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>MANAGER in STOCK ISLAND</strong></li>
+                    <li>Arrest Location: <strong>1409 4TH ST, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>KWPD18OFF006810</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Felony Count(s) of 893.13.6a COCAINE-POSSESS - POSSESS COCAINE</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 316.193.1 DUI-UNLAW BLD ALCH - DUI ALCOHOL OR DRUGS</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/20/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col col-md-12">
+                <h5><img src="/images/HRstar.png" alt="MCSO Star"></h5>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug8L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug8.jpg" alt="AHEE, DONALD LOUIS Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>AHEE, DONALD LOUIS</strong></span> was arrested on <strong>12/02/2018</strong> at <strong>22:48</strong></li>
+                    <li>Date of Birth: <strong>05/27/1959</strong> Age: <strong>59</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong> STREETS OF KEY WEST, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>CONSTRUCTION</strong></li>
+                    <li>Arrest Location: <strong>2565 OVERSEAS HWY, MARATHON</strong></li>
+                    <li>Arresting Officer/Agency: <strong>GUIEB, ANTONIO - MCSO - DIST 4 ROAD PATROL</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD158897</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008812</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 812.014.3a LARC - PETIT THEFT 2ND DEGREE 1ST OFFENSE</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 893.13.6b MARIJUANA-POSSESS - NOT MORE THAN 20 GRAMS</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 893.147.1 DRUG EQUIP-POSSESS - AND OR USE</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/18/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug9L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug9.jpg" alt="BILLY, MAURICE  Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>BILLY, MAURICE </strong></span> was arrested on <strong>12/02/2018</strong> at <strong>12:10</strong></li>
+                    <li>Date of Birth: <strong>10/27/1966</strong> Age: <strong>52</strong> Gender: <strong>M</strong> Race: <strong>B</strong></li>
+                    <li>Address: <strong>220 15TH ROAD, HOMESTEAD, FL 33030</strong></li>
+                    <li>Occupation: <strong>COOK in KEY LARGO</strong></li>
+                    <li>Arrest Location: <strong> OCEAN DR / 99.8 MM OC, KEY LARGO</strong></li>
+                    <li>Arresting Officer/Agency: <strong>WILLIAMS, TONY - MCSO - DIST 7 ROAD PATROL</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD158699</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008805</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 322.03.5 MOVING TRAFFIC VIOL - DRIVE WITH EXPIRED LIC FOR MORE THAN 6 MOS</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/19/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug10L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug10.jpg" alt="CROWELL, THOMAS JOHN Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>CROWELL, THOMAS JOHN</strong></span> was arrested on <strong>12/02/2018</strong> at <strong>20:04</strong></li>
+                    <li>Date of Birth: <strong>05/29/1950</strong> Age: <strong>68</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>17 CALHOUN OJO DE AQUA, SAN MIGUEL, MM </strong></li>
+                    <li>Occupation: <strong>RETIRED</strong></li>
+                    <li>Arrest Location: <strong> US 1 MM 5 SB, STOCK ISLAND</strong></li>
+                    <li>Arresting Officer/Agency: <strong>PACIFICO, VINCE - MCSO - ROAD PATROL -</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD158839</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008811</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 322.30.1 MOVING TRAFFIC VIOL - DRIVE W LIC FROM OTHER STATE WHEN FL LIC SUSP</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 322.34.2 MOVING TRAFFIC VIOL - KNOWINGLY DRIVE WHILE LIC SUSPENDED REVOKED</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug11L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug11.jpg" alt="FREEMAN, KENTRELL ROLAND Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>FREEMAN, KENTRELL ROLAND</strong></span> was arrested on <strong>12/02/2018</strong> at <strong>22:41</strong></li>
+                    <li>Date of Birth: <strong>08/05/1993</strong> Age: <strong>25</strong> Gender: <strong>M</strong> Race: <strong>B</strong></li>
+                    <li>Address: <strong>6500 MALONEY AVE, STOCK ISLAND, FL 33040</strong></li>
+                    <li>Occupation: <strong>CARPENTER in KEY WEST</strong></li>
+                    <li>Arrest Location: <strong>2500 ROOSEVELT BLVD, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>KWPD18OFF006802</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 893.13.6b MARIJUANA-POSSESS - NOT MORE THAN 20 GRAMS</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug12L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug12.jpg" alt="GANNON, NICHOLAS ALLEN Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>GANNON, NICHOLAS ALLEN</strong></span> was arrested on <strong>12/02/2018</strong> at <strong>01:33</strong></li>
+                    <li>Date of Birth: <strong>10/03/1990</strong> Age: <strong>28</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong> STREETS OF KEY WEST, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>MECHANIC in MARATHON</strong></li>
+                    <li>Arrest Location: <strong> 7 MILE MARKER OVERSEAS HWY, BOCA CHICA</strong></li>
+                    <li>Arresting Officer/Agency: <strong>EASON, ZACHARY - MCSO - DIST 1 ROAD PATROL</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD158580</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008795</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 836.12. THREATS AGAINST LAW ENFORCEMENT - AGAINST LAW ENFORCEMENT OFFICER</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 843.02 RESIST OFFICER - OBSTRUCT WO VIOLENCE</strong></li>
+                         
+                            <li><strong>1 Felony Count(s) of 914.22.2a OBSTRUCTING JUSTICE - TAMPERING IN MISDEMEANOR PROCEEDING</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug13L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug13.jpg" alt="GRAHAM, BONNY SCOTT Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>GRAHAM, BONNY SCOTT</strong></span> was arrested on <strong>12/02/2018</strong> at <strong>14:59</strong></li>
+                    <li>Date of Birth: <strong>04/26/1957</strong> Age: <strong>61</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong> STREETS OF KEY WEST, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>NONE</strong></li>
+                    <li>Arrest Location: <strong>522 FLEMING ST, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>KWPD18OFF006796</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 812.014.2e LARC - PETIT THEFT 1ST DEGREE 100 LESS 300 DOLS</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug14L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug14.jpg" alt="KAIN, ANDREW JOHN Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>KAIN, ANDREW JOHN</strong></span> was arrested on <strong>12/02/2018</strong> at <strong>22:41</strong></li>
+                    <li>Date of Birth: <strong>10/14/1970</strong> Age: <strong>48</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong> STREETS OF KEY WEST, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>2100 FLAGLER AV, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>KWPS18OFF006804</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 843.02 RESIST OFFICER - OBSTRUCT WO VIOLENCE</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug15L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug15.jpg" alt="PAINE, DANIEL HARLEY Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>PAINE, DANIEL HARLEY</strong></span> was arrested on <strong>12/02/2018</strong> at <strong>04:20</strong></li>
+                    <li>Date of Birth: <strong>09/04/1974</strong> Age: <strong>44</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>3828 DUCK AVE, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>ARTIST in KEY WEST</strong></li>
+                    <li>Arrest Location: <strong> 3600 NORTHSIDE DR, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>SWOGGER, EDWARD - MCSO - SPECIAL OPS - TRAFFIC</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD158615</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008796</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 316.193.1 DUI-UNLAW BLD ALCH - DUI ALCOHOL OR DRUGS</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 318.14.3 RESIST OFFICER - REFUSE TO ACCEPT SIGN CITATION OR POST BOND</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/13/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug16L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug16.jpg" alt="UNDERWOOD, CHRISTOPHER LADON Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>UNDERWOOD, CHRISTOPHER LADON</strong></span> was arrested on <strong>12/02/2018</strong> at <strong>13:47</strong></li>
+                    <li>Date of Birth: <strong>03/27/1987</strong> Age: <strong>31</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>467 SUNSET DR, KEY LARGO, FL 33037</strong></li>
+                    <li>Occupation: <strong>CONSTRUCTION in PLANTATION KEY</strong></li>
+                    <li>Arrest Location: <strong>467 SUNSET DR, KEY LARGO</strong></li>
+                    <li>Arresting Officer/Agency: <strong>HEALY, JON - </strong></li>
+                    <li>Incident #: <strong>MCSO18CAD158730</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008807</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 784.03.1a1 BATTERY - TOUCH OR STRIKE</strong></li>
+                         
+                            <li><strong>1 Felony Count(s) of 787.02.1a KIDNAP-FALSE IMPRISONMENT - ADULT</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/18/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col col-md-12">
+                <h5><img src="/images/HRstar.png" alt="MCSO Star"></h5>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug17L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug17.jpg" alt="ARMSTRONG, NOAH PAUL Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>ARMSTRONG, NOAH PAUL</strong></span> was arrested on <strong>12/01/2018</strong> at <strong>10:07</strong></li>
+                    <li>Date of Birth: <strong>09/26/1997</strong> Age: <strong>21</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>143 FONTAINE DR, TAVERNIER, FL 33070</strong></li>
+                    <li>Occupation: <strong>None</strong></li>
+                    <li>Arrest Location: <strong>2000 COCO PLUM DR, MARATHON</strong></li>
+                    <li>Arresting Officer/Agency: <strong>FAISON, MEGAN - MCSO - DIST 4/5 SHIFT D</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD158288</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008782</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 784.03.1a1 BATTERY - TOUCH OR STRIKE</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 812.014.3a LARC - PETIT THEFT 2ND DEGREE 1ST OFFENSE</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/11/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug18L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug18.jpg" alt="AVILA, JOHN LAWRENCE Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>AVILA, JOHN LAWRENCE</strong></span> was arrested on <strong>12/01/2018</strong> at <strong>19:22</strong></li>
+                    <li>Date of Birth: <strong>11/12/1959</strong> Age: <strong>59</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong> STREETS, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>UNEMPLOYED</strong></li>
+                    <li>Arrest Location: <strong> 7 MILE MARKER SB OVERSEAS HWY, BOCA CHICA</strong></li>
+                    <li>Arresting Officer/Agency: <strong>SWOGGER, EDWARD - MCSO - SPECIAL OPS - TRAFFIC</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD158469</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008790</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 316.193.4 DUI-UNLAW BLD ALCH - .15 OR HIGHER OR WITH PERSON UNDER 18 3RD OFF</strong></li>
+                         
+                            <li><strong>1 Felony Count(s) of 316.1935.2 RESIST OFFICER - FLEE ELUDE LEO WITH LIGHTS SIREN ACTIVE</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug19L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug19.jpg" alt="CRUZ TORRES, BENIGNO  Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>CRUZ TORRES, BENIGNO </strong></span> was arrested on <strong>12/01/2018</strong> at <strong>16:30</strong></li>
+                    <li>Date of Birth: <strong>12/18/1961</strong> Age: <strong>56</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong> STREETS OF MARATHON, MARATHON, FL 33050</strong></li>
+                    <li>Occupation: <strong>PAINTER in MARATHON</strong></li>
+                    <li>Arrest Location: <strong>3755 OVERSEAS HWY, MARATHON</strong></li>
+                    <li>Arresting Officer/Agency: <strong>WESTERBAND, FRANK - MCSO - DIST 5 ROAD PATROL</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD158402</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008787</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/11/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug20L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug20.jpg" alt="DEAN, STEPHEN JAMES Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>DEAN, STEPHEN JAMES</strong></span> was arrested on <strong>12/01/2018</strong> at <strong>15:41</strong></li>
+                    <li>Date of Birth: <strong>01/26/1983</strong> Age: <strong>35</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>1102 TRUMAN AV, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>300 GRINNELL AT, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>KWPD18OFF006779</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 999999 MUNICIPAL ORDINANCE VIOL - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug21L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug21.jpg" alt="DIAZ, LEONARDO  Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>DIAZ, LEONARDO </strong></span> was arrested on <strong>12/01/2018</strong> at <strong>22:41</strong></li>
+                    <li>Date of Birth: <strong>08/27/1964</strong> Age: <strong>54</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>1623 SPALDING CT, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>CARPENTER</strong></li>
+                    <li>Arrest Location: <strong>2007 ROOSEVELT DR, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>KWPD18OFF006783</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 322.03.5 MOVING TRAFFIC VIOL - DRIVE WITH EXPIRED LIC FOR MORE THAN 6 MOS</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug22L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug22.jpg" alt="GLATZ, PATRICK A Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>GLATZ, PATRICK A</strong></span> was arrested on <strong>12/01/2018</strong> at <strong>11:18</strong></li>
+                    <li>Date of Birth: <strong>03/16/1979</strong> Age: <strong>39</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>148 INDIES DR, DUCK KEY, FL 33050</strong></li>
+                    <li>Occupation: <strong>CHEF in DUCK KEY</strong></li>
+                    <li>Arrest Location: <strong> CYPRESS ST, DUCK KEY</strong></li>
+                    <li>Arresting Officer/Agency: <strong>AGUANNO, CHRISTOPHER - MCSO - DIST 4 ROAD PATROL</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug23L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug23.jpg" alt="KILPATRICK, DANIEL MICHAEL Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>KILPATRICK, DANIEL MICHAEL</strong></span> was arrested on <strong>12/01/2018</strong> at <strong>03:20</strong></li>
+                    <li>Date of Birth: <strong>04/22/1989</strong> Age: <strong>29</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>14243 150TH AVE, MIAMI, FL 33037</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong> OVERSEAS HWY, 102MM, KEY LARGO</strong></li>
+                    <li>Arresting Officer/Agency: <strong>TORRES, JOEL - MCSO - ROAD PATROL - SECTOR 7</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD158200</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008778</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Felony Count(s) of 893.13.6a DRUGS-POSSESS - CNTRL SUB WO PRESCRIPTION</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/11/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug24L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug24.jpg" alt="LYLES, LANCE D Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>LYLES, LANCE D</strong></span> was arrested on <strong>12/01/2018</strong> at <strong>13:30</strong></li>
+                    <li>Date of Birth: <strong>05/21/1981</strong> Age: <strong>37</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong> STREETS OF KEY WEST, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>CONSTRUCTION</strong></li>
+                    <li>Arrest Location: <strong>410 WALL ST, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>KWPD18OFF006773</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 999999 MUNICIPAL ORDINANCE VIOL - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug25L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug25.jpg" alt="RICARDO, JOHN  Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>RICARDO, JOHN </strong></span> was arrested on <strong>12/01/2018</strong> at <strong>00:46</strong></li>
+                    <li>Date of Birth: <strong>10/01/1995</strong> Age: <strong>23</strong> Gender: <strong>M</strong> Race: <strong>H</strong></li>
+                    <li>Address: <strong>19011 43RD AVENUE, MIAMI, FL 33055</strong></li>
+                    <li>Occupation: <strong>NONE</strong></li>
+                    <li>Arrest Location: <strong>3755 OVERSEAS HWY, MARATHON</strong></li>
+                    <li>Arresting Officer/Agency: <strong>GUIEB, ANTONIO - MCSO - DIST 4 ROAD PATROL</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD158172</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008776</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 322.34.2 MOVING TRAFFIC VIOL - KNOWINGLY DRIVE WHILE LIC SUSPENDED REVOKED</strong></li>
+                         
+                            <li><strong>1 Felony Count(s) of 790.01 CARRYING CONCEALED WEAPON - UNLICENSED FIREARM</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 893.147.1 DRUG EQUIP-POSSESS - AND OR USE</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 893.147.1 DRUG EQUIP-POSSESS - AND OR USE</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 893.147.1 DRUG EQUIP-POSSESS - AND OR USE</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/18/2018 at 13:30</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug26L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug26.jpg" alt="SILVERNAIL, ANGELA CHAVES Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>SILVERNAIL, ANGELA CHAVES</strong></span> was arrested on <strong>12/01/2018</strong> at <strong>22:01</strong></li>
+                    <li>Date of Birth: <strong>11/03/1956</strong> Age: <strong>62</strong> Gender: <strong>F</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>200 WRENN ST, TAVERNIER, FL 33070</strong></li>
+                    <li>Occupation: <strong>None</strong></li>
+                    <li>Arrest Location: <strong>200 WRENN ST, PLANTATION KEY</strong></li>
+                    <li>Arresting Officer/Agency: <strong>ARGOTE, NESTOR - MCSO - DIST 6 ROAD PATROL SHIFT B2</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD158525</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008792</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Felony Count(s) of 784.045.1a2 AGGRAV BATTERY - PERSON USES A DEADLY WEAPON</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/11/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug27L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug27.jpg" alt="STRICKLAND, LANCE COLBY Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>STRICKLAND, LANCE COLBY</strong></span> was arrested on <strong>12/01/2018</strong> at <strong>15:35</strong></li>
+                    <li>Date of Birth: <strong>08/12/1982</strong> Age: <strong>36</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>1695 BROADWAY RD, MILTON, PA </strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>1 MALLORY SQUARE, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>KWPD18OFF006774</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 947.21 PAROLE VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>Unknown at this time</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col col-md-12">
+                <h5><img src="/images/HRstar.png" alt="MCSO Star"></h5>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug28L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug28.jpg" alt="ARGENTO, CYNTHIA MARIE Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>ARGENTO, CYNTHIA MARIE</strong></span> was arrested on <strong>11/30/2018</strong> at <strong>11:51</strong></li>
+                    <li>Date of Birth: <strong>12/02/1962</strong> Age: <strong>56</strong> Gender: <strong>F</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>1603 7TH AVE - CAMILLUS HOUSE, MIAMI, FL 33037</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>5561 OVERSEAS HWY, MARATHON</strong></li>
+                    <li>Arresting Officer/Agency: <strong>FAISON, MEGAN - MCSO - DIST 4/5 SHIFT D</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD157871</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008754</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 506.509 POSSESS STOLEN PROP - ILLEGAL POSSESS SHOPPING OR LAUNDRY CART</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/11/2018 at 10:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug29L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug29.jpg" alt="BROWN, REGINALD DEWAYNE Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>BROWN, REGINALD DEWAYNE</strong></span> was arrested on <strong>11/30/2018</strong> at <strong>10:47</strong></li>
+                    <li>Date of Birth: <strong>10/05/1980</strong> Age: <strong>38</strong> Gender: <strong>M</strong> Race: <strong>B</strong></li>
+                    <li>Address: <strong>118 PENDELTON AVE, TALLAHASSEE, FL 32317</strong></li>
+                    <li>Occupation: <strong>None</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, STOCK ISLAND</strong></li>
+                    <li>Arresting Officer/Agency: <strong>ANDREWS, JULIAN - MCSO - KEY WEST CORRECTIONS B WATCH</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug30L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug30.jpg" alt="BRUNO, SCOTT MATTHEW Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>BRUNO, SCOTT MATTHEW</strong></span> was arrested on <strong>11/30/2018</strong> at <strong> 9:45</strong></li>
+                    <li>Date of Birth: <strong>07/04/1979</strong> Age: <strong>39</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>187 COCONUT AVE, MARATHON, FL 33050</strong></li>
+                    <li>Occupation: <strong>FISHERMAN</strong></li>
+                    <li>Arrest Location: <strong> 5501 JR COLLEGE RD, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>ZAMORA, FRANCISCO - </strong></li>
+                    <li>Incident #: <strong></strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Felony Count(s) of 812.014.2b1 LARC - 20K DOLS LESS 100K DOLS STATE OF EMERGENCY</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/18/2018 at 13:30</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug31L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug31.jpg" alt="CASH, ERIC JASON Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>CASH, ERIC JASON</strong></span> was arrested on <strong>11/30/2018</strong> at <strong>09:14</strong></li>
+                    <li>Date of Birth: <strong>08/24/1980</strong> Age: <strong>38</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>20525 JACARANDA ROAD, CUTLER BAY, FL 33189</strong></li>
+                    <li>Occupation: <strong>CONSTRUCTION in CUTLER BAY</strong></li>
+                    <li>Arrest Location: <strong> GUMBO LIMBO DR / 102 MM OC, KEY LARGO</strong></li>
+                    <li>Arresting Officer/Agency: <strong>HEALY, JON - </strong></li>
+                    <li>Incident #: <strong>MCSO18CAD157792</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008753</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 322.34.2a MOVING TRAFFIC VIOL - DRIVE WHILE LIC SUSP 1ST OFF</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 893.147.1 DRUG EQUIP-POSSESS - AND OR USE</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/12/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug32L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug32.jpg" alt="CLARK, KELLY TRILL Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>CLARK, KELLY TRILL</strong></span> was arrested on <strong>11/30/2018</strong> at <strong>17:17</strong></li>
+                    <li>Date of Birth: <strong>06/05/1984</strong> Age: <strong>34</strong> Gender: <strong>M</strong> Race: <strong>B</strong></li>
+                    <li>Address: <strong>1009 FORT ST, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, STOCK ISLAND</strong></li>
+                    <li>Arresting Officer/Agency: <strong>LEWIS-COX, LAURA - MCSO - KEY WEST CORRECTIONS A WATCH</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD148128</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008171</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Felony Count(s) of 800.09.2 LEWD LASCV BEHAVIOR - COMMIT SEX ACT PRESENCE CORRECT FACIL EMPLOYEE</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>02/14/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug33L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug33.jpg" alt="CONFER, LUCAS GERALD Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>CONFER, LUCAS GERALD</strong></span> was arrested on <strong>11/30/2018</strong> at <strong>01:01</strong></li>
+                    <li>Date of Birth: <strong>06/23/1990</strong> Age: <strong>28</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>121 POINSETTA  DRIVE, KEY LARGO, FL 33037</strong></li>
+                    <li>Occupation: <strong>CHEF in KEY LARGO</strong></li>
+                    <li>Arrest Location: <strong> 100 MILE MARKER OVERSEAS HWY, KEY LARGO</strong></li>
+                    <li>Arresting Officer/Agency: <strong>SWOGGER, EDWARD - MCSO - SPECIAL OPS - TRAFFIC</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD157705</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008748</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 316.193.1 DUI-UNLAW BLD ALCH - DUI ALCOHOL OR DRUGS</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/12/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug34L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug34.jpg" alt="CORLISS, ROBERT EARL Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>CORLISS, ROBERT EARL</strong></span> was arrested on <strong>11/30/2018</strong> at <strong>08:49</strong></li>
+                    <li>Date of Birth: <strong>12/20/1978</strong> Age: <strong>39</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>31241 AVENUE D, BIG PINE KEY, FL 33042</strong></li>
+                    <li>Occupation: <strong>REAL ESTATE in BIG PINE KEY</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, STOCK ISLAND</strong></li>
+                    <li>Arresting Officer/Agency: <strong>RICE, ALVAREZ - MCSO - KEY WEST CORRECTIONS C WATCH</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 903.0471 CONDIT RELEASE VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>Unknown at this time</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug35L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug35.jpg" alt="DAVES, STEPHAN LEON Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>DAVES, STEPHAN LEON</strong></span> was arrested on <strong>11/30/2018</strong> at <strong> 6:50</strong></li>
+                    <li>Date of Birth: <strong>07/12/1985</strong> Age: <strong>33</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>1125 WASHINGTON ST, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>CHEF</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>DIXON, YVONNE - MCSO - KEY WEST CORRECTIONS D WATCH</strong></li>
+                    <li>Incident #: <strong></strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug36L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug36.jpg" alt="FALKE, AMANDA SUZANNE Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>FALKE, AMANDA SUZANNE</strong></span> was arrested on <strong>11/30/2018</strong> at <strong> 7:55</strong></li>
+                    <li>Date of Birth: <strong>02/24/1981</strong> Age: <strong>37</strong> Gender: <strong>F</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>30625 5 AVE, BIG PINE KEY, FL 33043</strong></li>
+                    <li>Occupation: <strong>LANDRY in SUGARLOAF KEY</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>DIXON, YVONNE - MCSO - KEY WEST CORRECTIONS D WATCH</strong></li>
+                    <li>Incident #: <strong></strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug37L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug37.jpg" alt="FLYNN, CHRISTIAN PATRICK Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>FLYNN, CHRISTIAN PATRICK</strong></span> was arrested on <strong>11/30/2018</strong> at <strong>21:23</strong></li>
+                    <li>Date of Birth: <strong>05/17/1994</strong> Age: <strong>24</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>455 BARRACUDA DRIVE, KEY LARGO, FL 33037</strong></li>
+                    <li>Occupation: <strong>BARTENDER</strong></li>
+                    <li>Arrest Location: <strong> US1/SR5 96MM, KEY LARGO</strong></li>
+                    <li>Arresting Officer/Agency: <strong>TORRES, JOEL - MCSO - ROAD PATROL - SECTOR 7</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD158118</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008771</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 316.193.1 DUI-UNLAW BLD ALCH - DUI ALCOHOL OR DRUGS</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 318.14.3 RESIST OFFICER - REFUSE TO ACCEPT SIGN CITATION OR POST BOND</strong></li>
+                         
+                            <li><strong>1 Felony Count(s) of 893.13.6a DRUGS-POSSESS - CNTRL SUB WO PRESCRIPTION</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 893.147.1 DRUG EQUIP-POSSESS - AND OR USE</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/11/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug38L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug38.jpg" alt="JEAN, JOHNLEY  Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>JEAN, JOHNLEY </strong></span> was arrested on <strong>11/30/2018</strong> at <strong>14:15</strong></li>
+                    <li>Date of Birth: <strong>10/03/1992</strong> Age: <strong>26</strong> Gender: <strong>M</strong> Race: <strong>B</strong></li>
+                    <li>Address: <strong>1080 167TH, N MIAMI BCH, FL 33162</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, STOCK ISLAND</strong></li>
+                    <li>Arresting Officer/Agency: <strong>RICE, ALVAREZ - MCSO - KEY WEST CORRECTIONS C WATCH</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug39L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug39.jpg" alt="KIDDY, MARISSA ANNE Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>KIDDY, MARISSA ANNE</strong></span> was arrested on <strong>11/30/2018</strong> at <strong>21:04</strong></li>
+                    <li>Date of Birth: <strong>11/08/1974</strong> Age: <strong>44</strong> Gender: <strong>F</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>525 STOUT STREET, BRIDGEPORT, WV 26360</strong></li>
+                    <li>Occupation: <strong>DISABLED</strong></li>
+                    <li>Arrest Location: <strong> OVERSEAS HIGHWAY  KEY DEER STR, BAHIA HONDA</strong></li>
+                    <li>Arresting Officer/Agency: <strong>JONES, MARK - MCSO - DIST 4 ROAD PATROL</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD158112</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008770</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Felony Count(s) of 316.1935.3a FLEE/ELUDE POLICE - FLEE W DISREGARD OF SAFETY TO PERSONS OR PROP</strong></li>
+                         
+                            <li><strong>1 Felony Count(s) of 893.13.6a DRUGS-POSSESS - CNTRL SUB WO PRESCRIPTION</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug40L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug40.jpg" alt="LARMAN, KIM MOLINA Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>LARMAN, KIM MOLINA</strong></span> was arrested on <strong>11/30/2018</strong> at <strong>00:00</strong></li>
+                    <li>Date of Birth: <strong>06/24/1963</strong> Age: <strong>55</strong> Gender: <strong>F</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>27 SILVER SPRINGS DR, KEY LARGO, FL 33037</strong></li>
+                    <li>Occupation: <strong>POSTAL WORKER</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE ROAD, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>CAREAGA, THOMAS - MCSO - KEY WEST CORRECTIONS A WATCH</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/11/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug41L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug41.jpg" alt="MCLAUGHLIN, JOSHUA MICHAEL Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>MCLAUGHLIN, JOSHUA MICHAEL</strong></span> was arrested on <strong>11/30/2018</strong> at <strong>12:57</strong></li>
+                    <li>Date of Birth: <strong>05/20/1987</strong> Age: <strong>31</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>398 WAYNE AVE, COLUMBUS, OH 43204</strong></li>
+                    <li>Occupation: <strong>MEDICAL ASSISTANT</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, STOCK ISLAND</strong></li>
+                    <li>Arresting Officer/Agency: <strong>BROWN, DEBRA - MCSO - KV CORRECTIONS</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Felony Count(s) of 843.15.1a FAILURE TO APPEAR - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug42L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug42.jpg" alt="RYAN, WILLIAM ANDREW Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>RYAN, WILLIAM ANDREW</strong></span> was arrested on <strong>11/30/2018</strong> at <strong>18:57</strong></li>
+                    <li>Date of Birth: <strong>06/11/1989</strong> Age: <strong>29</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>909 18 ST, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>BONDSMAN</strong></li>
+                    <li>Arrest Location: <strong>909 18TH ST, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>KWPD18OFF180675</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 499.03.1 DRUGS-HEALTH OR SAFETY - POSS HARMFUL NEW LEGEND DRUG WO PRESCRIPTION</strong></li>
+                         
+                            <li><strong>1 Felony Count(s) of 893.13.1c2 MARIJUANA-POSSESS - WIT SELL ETC WI 1K FT SPECIFIED AREA SCH I</strong></li>
+                         
+                            <li><strong>1 Felony Count(s) of 893.13.6a DRUGS-POSSESS - CNTRL SUB WO PRESCRIPTION</strong></li>
+                         
+                            <li><strong>1 Felony Count(s) of 893.13.6a DRUGS-POSSESS - CNTRL SUB WO PRESCRIPTION</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 893.147.1 DRUG EQUIP-POSSESS - AND OR USE</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug43L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug43.jpg" alt="SEARS, THOMAS MICHAEL Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>SEARS, THOMAS MICHAEL</strong></span> was arrested on <strong>11/30/2018</strong> at <strong>09:20</strong></li>
+                    <li>Date of Birth: <strong>04/29/1949</strong> Age: <strong>69</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>401 NORMANDY  DRIVE, TAVERNIER, FL 33070</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>50 HIGHPOINT RD, TAVERNIER</strong></li>
+                    <li>Arresting Officer/Agency: <strong>ASKINS, EDWARD - MCSO - DIST 6/7 CIU</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD153841</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008503</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Felony Count(s) of 790.23.1c POSSESSION OF WEAPON - OR AMMO BY CONVICTED UNITED STATES FELON</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/11/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug44L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug44.jpg" alt="TATUM, ERIC ALLEN Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>TATUM, ERIC ALLEN</strong></span> was arrested on <strong>11/30/2018</strong> at <strong>12:44</strong></li>
+                    <li>Date of Birth: <strong>03/29/1980</strong> Age: <strong>38</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>3411 MAHAN DRIVE, TALLAHASSEE, FL </strong></li>
+                    <li>Occupation: <strong>OYSTER MAN</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, STOCK ISLAND</strong></li>
+                    <li>Arresting Officer/Agency: <strong>BROWN, DEBRA - MCSO - KV CORRECTIONS</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 843.15.1b FAILURE TO APPEAR - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>Unknown at this time</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug45L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug45.jpg" alt="TORRES PEREZ, PEDRO MANUEL Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>TORRES PEREZ, PEDRO MANUEL</strong></span> was arrested on <strong>11/30/2018</strong> at <strong>15:29</strong></li>
+                    <li>Date of Birth: <strong>02/23/1947</strong> Age: <strong>71</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>31466 AVE C/31 MM GU, BIG PINE KEY, FL 33043</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, STOCK ISLAND</strong></li>
+                    <li>Arresting Officer/Agency: <strong>WALES, ANTHONY - MCSO - DIST 1 ROAD PATROL</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD157971</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008762</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 499.03.1 DRUGS-HEALTH OR SAFETY - POSS HARMFUL NEW LEGEND DRUG WO PRESCRIPTION</strong></li>
+                         
+                            <li><strong>1 Felony Count(s) of 893.13.6a DRUGS-POSSESS - CNTRL SUB WO PRESCRIPTION</strong></li>
+                         
+                            <li><strong>1 Felony Count(s) of 893.13.1a2 DRUGS-POSSESS - WIT SELL ETC OTHER SCHEDULE III OR IV</strong></li>
+                         
+                            <li><strong>1 Felony Count(s) of 934.215 PUBLIC ORDER CRIMES - USE 2 WAY COMM DEVICE TO FACIL FELONY</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col col-md-12">
+                <h5><img src="/images/HRstar.png" alt="MCSO Star"></h5>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug46L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug46.jpg" alt="BARNETT, JESSE PAUL Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>BARNETT, JESSE PAUL</strong></span> was arrested on <strong>11/29/2018</strong> at <strong>09:41</strong></li>
+                    <li>Date of Birth: <strong>02/02/1988</strong> Age: <strong>30</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>1132 CALLE ENSENADA, MARATHON, FL 33050</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>1054 JAMES TERRACE, MARATHON</strong></li>
+                    <li>Arresting Officer/Agency: <strong>SCHMITT, JENNIFER - MCSO - DIST 5 ROAD PATROL</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/06/2018 at 13:30</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug47L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug47.jpg" alt="BORTREE, EDWARD  Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>BORTREE, EDWARD </strong></span> was arrested on <strong>11/29/2018</strong> at <strong> 9:15</strong></li>
+                    <li>Date of Birth: <strong>02/08/1948</strong> Age: <strong>70</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>499 91 ST OCEAN, MARATHON, FL 33050</strong></li>
+                    <li>Occupation: <strong>RETIRED</strong></li>
+                    <li>Arrest Location: <strong> 5501 JR COLLEGE RD, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong> - </strong></li>
+                    <li>Incident #: <strong></strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Felony Count(s) of 812.014.2b1 LARC - 20K DOLS LESS THAN 100K DOLS</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/18/2018 at 13:30</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug48L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug48.jpg" alt="CORDERO, RONALD H Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>CORDERO, RONALD H</strong></span> was arrested on <strong>11/29/2018</strong> at <strong>12:23</strong></li>
+                    <li>Date of Birth: <strong>10/08/1991</strong> Age: <strong>27</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>6215 20TH AVE, HIALEAH, FL 33012</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong> MALLORY SQUARE, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>KWPD18OFF006697</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 812.014.3a LARC - PETIT THEFT 2ND DEGREE 1ST OFFENSE</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 893.13.6b MARIJUANA-POSSESS - NOT MORE THAN 20 GRAMS</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/images/web_wide_graphics/star.svg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/images/web_wide_graphics/star.svg" alt="CORDERO, RONALD H Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>CORDERO, RONALD H</strong></span> was arrested on <strong>11/29/2018</strong> at <strong>15:26</strong></li>
+                    <li>Date of Birth: <strong>10/08/1991</strong> Age: <strong>27</strong> Gender: <strong>M</strong> Race: <strong>H</strong></li>
+                    <li>Address: <strong>1315 76TH ST, HIALEAH, FL 33014</strong></li>
+                    <li>Occupation: <strong>None</strong></li>
+                    <li>Arrest Location: <strong>705 DUVAL ST, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>KWPD18006726</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Felony Count(s) of 817.568.2a FRAUD-IMPERSON - USE/POSS ID OF ANOTHER PERSON WO CONSENT</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 817.61 FRAUD-ILLEG USE CREDIT CARDS - 2 FEWER TIMES 6 MS OBT GDS MONEY LESS 100 DOL</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>Unknown at this time</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug49L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug49.jpg" alt="DELGADO, JUAN ANTONIO Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>DELGADO, JUAN ANTONIO</strong></span> was arrested on <strong>11/29/2018</strong> at <strong>17:39</strong></li>
+                    <li>Date of Birth: <strong>07/31/1979</strong> Age: <strong>39</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>15002 300TH TER, MIAMI, FL </strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KATZ, STEVEN - MCSO - KEY WEST CORRECTIONS D WATCH</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 843.15.1b FAILURE TO APPEAR - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/12/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug50L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug50.jpg" alt="GONZALEZ, OSCAR LUIS Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>GONZALEZ, OSCAR LUIS</strong></span> was arrested on <strong>11/29/2018</strong> at <strong>09:44</strong></li>
+                    <li>Date of Birth: <strong>08/15/1996</strong> Age: <strong>22</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>7931 OVERSEAS HWY, MARATHON, FL 33050</strong></li>
+                    <li>Occupation: <strong>HANDYMAN in VENICE</strong></li>
+                    <li>Arrest Location: <strong>3117 OVERSEAS HWY, MARATHON</strong></li>
+                    <li>Arresting Officer/Agency: <strong>DOUTHIRT, IAN - MCSO - DIST 4/5 SHIFT B</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD157417</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008721</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/18/2018 at 13:30</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug51L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug51.jpg" alt="KEYES, DEANDRE FIELDS Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>KEYES, DEANDRE FIELDS</strong></span> was arrested on <strong>11/29/2018</strong> at <strong>17:59</strong></li>
+                    <li>Date of Birth: <strong>07/22/1994</strong> Age: <strong>24</strong> Gender: <strong>M</strong> Race: <strong>B</strong></li>
+                    <li>Address: <strong>906 15 ST, HOMESTEAD, FL 33034</strong></li>
+                    <li>Occupation: <strong>MANAGER in ISLAMORADA</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KATZ, STEVEN - MCSO - KEY WEST CORRECTIONS D WATCH</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/11/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug52L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug52.jpg" alt="KOZMER, JAMES LESLIE Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>KOZMER, JAMES LESLIE</strong></span> was arrested on <strong>11/29/2018</strong> at <strong>14:30</strong></li>
+                    <li>Date of Birth: <strong>05/11/1960</strong> Age: <strong>58</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>2 COCO PLUM DR, FAT DEER KEY, FL 33050</strong></li>
+                    <li>Occupation: <strong>MARINE CONSTRUCTION in MARATHON</strong></li>
+                    <li>Arrest Location: <strong>7654 SHARK DRIVE, MARATHON</strong></li>
+                    <li>Arresting Officer/Agency: <strong>ZAMORA, FRANCISCO - </strong></li>
+                    <li>Incident #: <strong>2018SA00265</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Felony Count(s) of 812.014.2c2 LARC - GRAND THEFT 5K LESS THAN 10K DOLS</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/18/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug53L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug53.jpg" alt="ROBAINA MALAGON, OSBEL  Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>ROBAINA MALAGON, OSBEL </strong></span> was arrested on <strong>11/29/2018</strong> at <strong>21:48</strong></li>
+                    <li>Date of Birth: <strong>09/07/1989</strong> Age: <strong>29</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>1401 29TH ST, HIALEAH, FL 33012</strong></li>
+                    <li>Occupation: <strong>UNEMPLOYED</strong></li>
+                    <li>Arrest Location: <strong>53 HIGHPOINT ROAD, PLANTATION KEY</strong></li>
+                    <li>Arresting Officer/Agency: <strong>SWOGGER, EDWARD - MCSO - SPECIAL OPS - TRAFFIC</strong></li>
+                    <li>Incident #: <strong>MCSO10CAD060720</strong>  &emsp; - &emsp; Offense #: <strong>MCSO10OFF004396</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Felony Count(s) of 812.014.2c1 LARC - GRAND THEFT 300 LESS THAN 5K DOLS</strong></li>
+                         
+                            <li><strong>1 Felony Count(s) of 812.019.1 STOLEN PROP-DEAL IN - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/11/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug54L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug54.jpg" alt="MARTE, ROBERTO  Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>MARTE, ROBERTO </strong></span> was arrested on <strong>11/29/2018</strong> at <strong>21:08</strong></li>
+                    <li>Date of Birth: <strong>05/24/1961</strong> Age: <strong>57</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>72 148TH ST, MIAMI, FL 33161</strong></li>
+                    <li>Occupation: <strong>CONSTRUCTION</strong></li>
+                    <li>Arrest Location: <strong>4650 OVERSEAS HWY, MARATHON</strong></li>
+                    <li>Arresting Officer/Agency: <strong>HRADECKY, CORBIN - MCSO - DIST 4/5 SHIFT B</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD157638</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008743</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 316.193.4 DUI-UNLAWFUL BLD ALCH LEVEL - BLOOD OR BREATH ALCOHOL LEVEL OF .20 OR HIGHER</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/13/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug55L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug55.jpg" alt="NESBITT, CELENA L Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>NESBITT, CELENA L</strong></span> was arrested on <strong>11/29/2018</strong> at <strong>15:08</strong></li>
+                    <li>Date of Birth: <strong>09/01/1972</strong> Age: <strong>46</strong> Gender: <strong>F</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>15-282 PAHOA VILLAGE ROAD, PAHOA, HI 96778</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>2928 ROOSEVELT BLVD, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>KWPD18OFF006731</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 812.014.2e LARC - PETIT THEFT 1ST DEGREE 100 LESS 300 DOLS</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/13/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug56L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug56.jpg" alt="OTANO, JUAN AGUIAR Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>OTANO, JUAN AGUIAR</strong></span> was arrested on <strong>11/29/2018</strong> at <strong>19:22</strong></li>
+                    <li>Date of Birth: <strong>12/22/1943</strong> Age: <strong>74</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>25151 CENTER ST, SUMMERLAND KEY, FL 33042</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>500 VIRGINA ST, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>KWPD18OFF006742</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 999999 MUNICIPAL ORDINANCE VIOL - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/13/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug57L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug57.jpg" alt="REED, HEATHER MARIE Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>REED, HEATHER MARIE</strong></span> was arrested on <strong>11/29/2018</strong> at <strong>09:58</strong></li>
+                    <li>Date of Birth: <strong>06/05/1980</strong> Age: <strong>38</strong> Gender: <strong>F</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>29166 PRIMROSE LANE, BIG PINE KEY, FL 33040</strong></li>
+                    <li>Occupation: <strong>COOK in CUDJOE KEY</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KATZ, STEVEN - MCSO - KEY WEST CORRECTIONS D WATCH</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 903.0471 CONDIT RELEASE VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>11/30/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug58L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug58.jpg" alt="ROBAINA MALAGON, OSBEL  Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>ROBAINA MALAGON, OSBEL </strong></span> was arrested on <strong>11/29/2018</strong> at <strong>21:55</strong></li>
+                    <li>Date of Birth: <strong>09/07/1989</strong> Age: <strong>29</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>1401 29TH ST, HIALEAH, FL 33012</strong></li>
+                    <li>Occupation: <strong>UNEMPLOYED</strong></li>
+                    <li>Arrest Location: <strong>53 HIGHPOINT ROAD, PLANTATION KEY</strong></li>
+                    <li>Arresting Officer/Agency: <strong>SWOGGER, EDWARD - MCSO - SPECIAL OPS - TRAFFIC</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - OR COMMTY CONT RE UNK/FEL/MISD/JUV NON CRITRIA</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/12/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug59L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug59.jpg" alt="RODRIGUEZ, ROBERT  Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>RODRIGUEZ, ROBERT </strong></span> was arrested on <strong>11/29/2018</strong> at <strong>17:33</strong></li>
+                    <li>Date of Birth: <strong>07/15/1970</strong> Age: <strong>48</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>1515N MIAMI AVE, MIAMI, FL 33136</strong></li>
+                    <li>Occupation: <strong>FISHERMAN</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KATZ, STEVEN - MCSO - KEY WEST CORRECTIONS D WATCH</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/08/2018 at 13:30</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug60L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug60.jpg" alt="SITERS, RICHARD MARK Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>SITERS, RICHARD MARK</strong></span> was arrested on <strong>11/29/2018</strong> at <strong>12:40</strong></li>
+                    <li>Date of Birth: <strong>06/04/1976</strong> Age: <strong>42</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>1401 TRUMAN AVE, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>2506 ROOSEVELT BLVD, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong></strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 812.014.3a LARC - PETIT THEFT 2ND DEGREE 1ST OFFENSE</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/13/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug61L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug61.jpg" alt="STRINGER, AUSTIN VIRGIL RAY Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>STRINGER, AUSTIN VIRGIL RAY</strong></span> was arrested on <strong>11/29/2018</strong> at <strong>10:48</strong></li>
+                    <li>Date of Birth: <strong>09/24/1997</strong> Age: <strong>21</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>25 JAMES COURT, MARATHON, FL 33404</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>3103 OVERSEAS HWY, MARATHON</strong></li>
+                    <li>Arresting Officer/Agency: <strong>DOUTHIRT, IAN - MCSO - DIST 4/5 SHIFT B</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD157438</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008722</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/11/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug62L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug62.jpg" alt="SUAREZ, TRISHA MONIQUE Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>SUAREZ, TRISHA MONIQUE</strong></span> was arrested on <strong>11/29/2018</strong> at <strong>14:15</strong></li>
+                    <li>Date of Birth: <strong>07/16/1989</strong> Age: <strong>29</strong> Gender: <strong>F</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>296 SCORPIO LN / 10.5 MM, BIG COPPITT KEY, FL 33040</strong></li>
+                    <li>Occupation: <strong>FRONT DESK in KEY WEST</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, STOCK ISLAND</strong></li>
+                    <li>Arresting Officer/Agency: <strong>MCSO, - </strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug63L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug63.jpg" alt="VILLALOBES FLORES, ROBERTO  Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>VILLALOBES FLORES, ROBERTO </strong></span> was arrested on <strong>11/29/2018</strong> at <strong>17:45</strong></li>
+                    <li>Date of Birth: <strong>09/17/1981</strong> Age: <strong>37</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>9015 125TH AVE, MIAMI, FL 33186</strong></li>
+                    <li>Occupation: <strong>None</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KATZ, STEVEN - MCSO - KEY WEST CORRECTIONS D WATCH</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 843.15.1b FAILURE TO APPEAR - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/13/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug64L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug64.jpg" alt="WAHAB, ROSANA  Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>WAHAB, ROSANA </strong></span> was arrested on <strong>11/29/2018</strong> at <strong>17:53</strong></li>
+                    <li>Date of Birth: <strong>11/24/1980</strong> Age: <strong>38</strong> Gender: <strong>F</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>1358 PENNSYLVANIA AVE, MIAMI, FL 33139</strong></li>
+                    <li>Occupation: <strong>UNEMPLOYED</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KATZ, STEVEN - MCSO - KEY WEST CORRECTIONS D WATCH</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 843.15.1b FAILURE TO APPEAR - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/13/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col col-md-12">
+                <h5><img src="/images/HRstar.png" alt="MCSO Star"></h5>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug65L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug65.jpg" alt="BROGEN, WILLIAM MARION Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>BROGEN, WILLIAM MARION</strong></span> was arrested on <strong>11/28/2018</strong> at <strong>17:57</strong></li>
+                    <li>Date of Birth: <strong>05/03/1969</strong> Age: <strong>49</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>15671 141ST COURT, COUNTRY WALK, FL 33177</strong></li>
+                    <li>Occupation: <strong>CONSTRUCTION WORKER</strong></li>
+                    <li>Arrest Location: <strong>93300 OVERSEAS HIGHWAY, TAVERNIER</strong></li>
+                    <li>Arresting Officer/Agency: <strong>HERNANDEZ, JOSE - MCSO - DIST 7 ROAD PATROL SHIFT B1</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD157197</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008707</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 322.34.2b MOVING TRAFFIC VIOL - DRIVE WHILE LIC SUSP 2ND OFF</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/12/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug66L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug66.jpg" alt="CAIN, KEVISIA TAQUONZA Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>CAIN, KEVISIA TAQUONZA</strong></span> was arrested on <strong>11/28/2018</strong> at <strong>10:43</strong></li>
+                    <li>Date of Birth: <strong>05/23/1986</strong> Age: <strong>32</strong> Gender: <strong>F</strong> Race: <strong>B</strong></li>
+                    <li>Address: <strong>58 9TH CT, HOMESTEAD, FL 33030</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>53 HIGH POINT ROAD, PLANTATION KEY</strong></li>
+                    <li>Arresting Officer/Agency: <strong>HANSEN, DYLLON - MCSO - DIST 7 ROAD PATROL SHIFT A3</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 843.15.1b FAILURE TO APPEAR - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>Unknown at this time</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug67L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug67.jpg" alt="CANTY, ALEC MICHAEL Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>CANTY, ALEC MICHAEL</strong></span> was arrested on <strong>11/28/2018</strong> at <strong>13:06</strong></li>
+                    <li>Date of Birth: <strong>12/07/1991</strong> Age: <strong>26</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>2603 UMBERLLA TREE DRIVE, EDGEWATER, FL 32141</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KATZ, STEVEN - MCSO - KEY WEST CORRECTIONS D WATCH</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 843.15.1b FAILURE TO APPEAR - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug68L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug68.jpg" alt="DOAN, HIEU  Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>DOAN, HIEU </strong></span> was arrested on <strong>11/28/2018</strong> at <strong>10:32</strong></li>
+                    <li>Date of Birth: <strong>04/23/1970</strong> Age: <strong>48</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>3422 POST OAK RD, DALLAS, TX 75044</strong></li>
+                    <li>Occupation: <strong>FISHERMAN</strong></li>
+                    <li>Arrest Location: <strong> O.6 MILES SOUTH OF KEY WEST, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>FWC, - </strong></li>
+                    <li>Incident #: <strong>FWSB18OFF016602</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 379.401.2a CONSERVATION - VIOL FWC RULE OR ORDER LEVEL TWO SUBSQ OFF</strong></li>
+                         
+                            <li><strong>33 Misdemeanor Count(s) of 379.401.2a CONSERVATION - VIOL FWC RULE OR ORDER LEVEL TWO SUBSQ OFF</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug69L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug69.jpg" alt="DOWNEN, STEVEN W Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>DOWNEN, STEVEN W</strong></span> was arrested on <strong>11/28/2018</strong> at <strong>22:37</strong></li>
+                    <li>Date of Birth: <strong>04/25/1952</strong> Age: <strong>66</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>1800 ROOSEVELT BLVD, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>RETIRED</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, STOCK ISLAND</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/11/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug70L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug70.jpg" alt="DRAGO, FRANCESCO  Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>DRAGO, FRANCESCO </strong></span> was arrested on <strong>11/28/2018</strong> at <strong>09:30</strong></li>
+                    <li>Date of Birth: <strong>06/22/1968</strong> Age: <strong>50</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>6011N PENINSULAR AV/5 MM GU, STOCK ISLAND, FL 33040</strong></li>
+                    <li>Occupation: <strong>CO OWNER in STOCK ISLAND</strong></li>
+                    <li>Arrest Location: <strong> , </strong></li>
+                    <li>Arresting Officer/Agency: <strong> - </strong></li>
+                    <li>Incident #: <strong>2018CF000841AK</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Felony Count(s) of 812.014.2c2 LARC - GRAND THEFT 5K LESS THAN 10K DOLS</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug71L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug71.jpg" alt="KUMMER, TIMOTHY MATTHEW Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>KUMMER, TIMOTHY MATTHEW</strong></span> was arrested on <strong>11/28/2018</strong> at <strong>10:18</strong></li>
+                    <li>Date of Birth: <strong>09/26/1985</strong> Age: <strong>33</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong> STREETS OF MARATHON, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>NONE</strong></li>
+                    <li>Arrest Location: <strong>3103 OVERSEAS HWY, MARATHON</strong></li>
+                    <li>Arresting Officer/Agency: <strong>DOUTHIRT, IAN - MCSO - DIST 4/5 SHIFT B</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD157004</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008687</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/06/2018 at 13:30</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug72L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug72.jpg" alt="STOCKER, LIVINGSTON JAMES Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>STOCKER, LIVINGSTON JAMES</strong></span> was arrested on <strong>11/28/2018</strong> at <strong>14:44</strong></li>
+                    <li>Date of Birth: <strong>06/07/1986</strong> Age: <strong>32</strong> Gender: <strong>M</strong> Race: <strong>B</strong></li>
+                    <li>Address: <strong>2677 ROOSEVELT BLVD, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KATZ, STEVEN - MCSO - KEY WEST CORRECTIONS D WATCH</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug73L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug73.jpg" alt="VAN OOSTVEEN, ALEXANDER  Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>VAN OOSTVEEN, ALEXANDER </strong></span> was arrested on <strong>11/28/2018</strong> at <strong>02:25</strong></li>
+                    <li>Date of Birth: <strong>05/17/1994</strong> Age: <strong>24</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>236B EGELANTIIERSSTRAAT, AMSTERDAM,FF 1015P,  </strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>1900 ROOSEVELT BLVD, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>KWPD18OFF006696</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 316.193.1 DUI-UNLAW BLD ALCH - DUI ALCOHOL OR DRUGS</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/13/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug74L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug74.jpg" alt="WELLS, JAMES RAYMOND Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>WELLS, JAMES RAYMOND</strong></span> was arrested on <strong>11/28/2018</strong> at <strong>14:24</strong></li>
+                    <li>Date of Birth: <strong>04/22/1986</strong> Age: <strong>32</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>937 GULF DR/24.5 MM OC, SUMMERLAND KEY, FL 33042</strong></li>
+                    <li>Occupation: <strong>LAWN SERVICE</strong></li>
+                    <li>Arrest Location: <strong> 1ST ST @ AVE B, BIG PINE</strong></li>
+                    <li>Arresting Officer/Agency: <strong>RODDY, AARON - MCSO - DIST 1 ROAD PATROL</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD157109</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008701</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 316.061 HIT AND RUN - LEAVE SCENE OF CRASH INVOLVE DAMAGE TO PROP</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 316.193.1 DUI-UNLAW BLD ALCH - DUI ALCOHOL OR DRUGS</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/13/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug75L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug75.jpg" alt="WOOD, JESS RAY GARMON Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>WOOD, JESS RAY GARMON</strong></span> was arrested on <strong>11/28/2018</strong> at <strong>15:57</strong></li>
+                    <li>Date of Birth: <strong>11/27/1995</strong> Age: <strong>23</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>154 GUAVA AVE, GRASSY KEY, FL 33050</strong></li>
+                    <li>Occupation: <strong>SERVER in MARATHON</strong></li>
+                    <li>Arrest Location: <strong>3103 OVERSEAS HWY, MARATHON</strong></li>
+                    <li>Arresting Officer/Agency: <strong>WALRAVEN, DARREL - MCSO - DIST 4 ROAD PATROL</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD157157</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008703</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/11/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col col-md-12">
+                <h5><img src="/images/HRstar.png" alt="MCSO Star"></h5>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug76L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug76.jpg" alt="CAINE, NOLAN DOUGLAS Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>CAINE, NOLAN DOUGLAS</strong></span> was arrested on <strong>11/27/2018</strong> at <strong>15:40</strong></li>
+                    <li>Date of Birth: <strong>09/28/1986</strong> Age: <strong>32</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong> STREETS OF KEY WEST, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>ROCK BAND PLAYER</strong></li>
+                    <li>Arrest Location: <strong>4014 ROOSEVELT BLV, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong> - </strong></li>
+                    <li>Incident #: <strong>KWPD18OFF006673</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 893.147.1 DRUG EQUIP-POSSESS - AND OR USE</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>Unknown at this time</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug77L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug77.jpg" alt="CIESLIK, KRISTIN RUTHANNA Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>CIESLIK, KRISTIN RUTHANNA</strong></span> was arrested on <strong>11/27/2018</strong> at <strong>13:13</strong></li>
+                    <li>Date of Birth: <strong>11/19/1991</strong> Age: <strong>27</strong> Gender: <strong>F</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>2401 MAYPORT RD, ATLANTIC BEACH, FL 32233</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>1 OUTER MOLER RD, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong> - </strong></li>
+                    <li>Incident #: <strong>KWPD18OFF006669</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 901.04 OUT-OF-COUNTY WARRANT - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>Unknown at this time</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug78L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug78.jpg" alt="CORDELL, DON RAYMOND Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>CORDELL, DON RAYMOND</strong></span> was arrested on <strong>11/27/2018</strong> at <strong>01:34</strong></li>
+                    <li>Date of Birth: <strong>10/28/1979</strong> Age: <strong>39</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong> PATTERSON HOUSE, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>None</strong></li>
+                    <li>Arrest Location: <strong>1801 WHITE STREET, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>KWPD18OFF006658</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Felony Count(s) of 812.014.2a1 LARC - GRAND 1ST DEGREE 100K DOLS MORE OR LEO SEMI</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 893.13.6b MARIJUANA-POSSESS - NOT MORE THAN 20 GRAMS</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/13/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug79L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug79.jpg" alt="HERNANDEZ, AUREO  Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>HERNANDEZ, AUREO </strong></span> was arrested on <strong>11/27/2018</strong> at <strong>09:06</strong></li>
+                    <li>Date of Birth: <strong>07/15/1985</strong> Age: <strong>33</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>561 AVE C, BIG COPPITT, FL 33040</strong></li>
+                    <li>Occupation: <strong>FISHERMEN</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, STOCK ISLAND</strong></li>
+                    <li>Arresting Officer/Agency: <strong>RODRIGUEZ, FREDDY - MCSO - ROAD PATROL - SECTOR 1</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/13/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug80L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug80.jpg" alt="JAZO, RYAN PHILLIP ABRAHAM Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>JAZO, RYAN PHILLIP ABRAHAM</strong></span> was arrested on <strong>11/27/2018</strong> at <strong>00:46</strong></li>
+                    <li>Date of Birth: <strong>08/17/1978</strong> Age: <strong>40</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong> STREETS OF MARATHOM, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>NONE</strong></li>
+                    <li>Arrest Location: <strong>5595 OVERSEAS HWY, MARATHON</strong></li>
+                    <li>Arresting Officer/Agency: <strong>MORALES, VICTOR - MCSO - DIST 4 ROAD PATROL</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD156464</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008653</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Felony Count(s) of 812.014.3c LARC - PETIT THEFT 2ND DEGREE 3RD SUBSQ OFFENSE</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/18/2018 at 13:30</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug81L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug81.jpg" alt="JIMENEZ, SEAN ANTONIO Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>JIMENEZ, SEAN ANTONIO</strong></span> was arrested on <strong>11/27/2018</strong> at <strong>12:52</strong></li>
+                    <li>Date of Birth: <strong>01/28/1988</strong> Age: <strong>30</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>451 15TH STREET, HOMESTEAD, FL 33034</strong></li>
+                    <li>Occupation: <strong>SERVER in ISLAMORADA</strong></li>
+                    <li>Arrest Location: <strong>101640 OVERSEAS HWY, KEY LARGO</strong></li>
+                    <li>Arresting Officer/Agency: <strong>MEAD, DEVIN - MCSO - DIST 7 ROAD PATROL</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD156654</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008666</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 320.02.1 NONMOVING TRAFFIC VIOL - FAIL TO REGISTER MOTOR VEH</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 320.261 NONMOVING TRAFFIC VIOL - ATTACH REGISTRATION LICENSE PLATE NOT ASSIGNED</strong></li>
+                         
+                            <li><strong>1 Felony Count(s) of 322.34.2c MOVING TRAFFIC VIOL - DRIVE WHILE LIC SUSP 3RD OR SUBSQ OFF</strong></li>
+                         
+                            <li><strong>1 Felony Count(s) of 893.13.6a COCAINE-POSSESS - POSSESS COCAINE</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 893.13.6b MARIJUANA-POSSESS - NOT MORE THAN 20 GRAMS</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 322.34.2b MOVING TRAFFIC VIOL - DRIVE WHILE LIC SUSP 2ND OFF</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 322.34.2b MOVING TRAFFIC VIOL - DRIVE WHILE LIC SUSP 2ND OFF</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/04/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug82L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug82.jpg" alt="KEPPLEY, EDWIN LEE Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>KEPPLEY, EDWIN LEE</strong></span> was arrested on <strong>11/27/2018</strong> at <strong>20:43</strong></li>
+                    <li>Date of Birth: <strong>03/29/1960</strong> Age: <strong>58</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>108 GREEN ST, HARRISBURG, PA 17103</strong></li>
+                    <li>Occupation: <strong>UNEMPLOYED</strong></li>
+                    <li>Arrest Location: <strong>725 CAROLINE ST, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong> - </strong></li>
+                    <li>Incident #: <strong>KWPD18OFF006693</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 810.08.2a TRESPASSING - STRUCTURE OR CONVEYANCE</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/14/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug83L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug83.jpg" alt="LAUGHINGHOUSE, PATRICIA ALAXANDRA Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>LAUGHINGHOUSE, PATRICIA ALAXANDRA</strong></span> was arrested on <strong>11/27/2018</strong> at <strong>20:29</strong></li>
+                    <li>Date of Birth: <strong>03/20/1973</strong> Age: <strong>45</strong> Gender: <strong>F</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>2428 HARRIS AV, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>MAID in STOCK ISLAND</strong></li>
+                    <li>Arrest Location: <strong>1415 OVERSEAS HWY, MARATHON</strong></li>
+                    <li>Arresting Officer/Agency: <strong>ROSARIO PIETRI, CALEB - MCSO - DIST 4/5 SHIFT C</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD156804</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008681</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 316.193.1A  - TRAFFIC OFFENSE DUI - DRIVING UNDER THE INFLUENCE</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/11/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug84L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug84.jpg" alt="LEED, MICHAEL EDWARD Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>LEED, MICHAEL EDWARD</strong></span> was arrested on <strong>11/27/2018</strong> at <strong>09:01</strong></li>
+                    <li>Date of Birth: <strong>07/15/1955</strong> Age: <strong>63</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong> STREETS OF MARATHON, MARATHON, FL 33050</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>5407 OVERSEAS HWY, MARATHON</strong></li>
+                    <li>Arresting Officer/Agency: <strong>FAISON, MEGAN - MCSO - DIST 4/5 SHIFT D</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD156564</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008659</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 810.09.2a TRESPASSING - PROPERTY NOT STRUCTURE OR CONVEY</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/11/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug85L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug85.jpg" alt="MARTIN, JAMES EDWARD Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>MARTIN, JAMES EDWARD</strong></span> was arrested on <strong>11/27/2018</strong> at <strong>07:15</strong></li>
+                    <li>Date of Birth: <strong>12/29/1972</strong> Age: <strong>45</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong> STREETS, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>None</strong></li>
+                    <li>Arrest Location: <strong>1407 KENNEDY DR, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>KWPD18OFF6662</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 810.097.1 TRESPASSING - SCHOOL GROUNDS -WAS 228.091</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/06/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug86L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug86.jpg" alt="OLDHAM, JAMES LEE Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>OLDHAM, JAMES LEE</strong></span> was arrested on <strong>11/27/2018</strong> at <strong>07:08</strong></li>
+                    <li>Date of Birth: <strong>02/26/1977</strong> Age: <strong>41</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>7940 CAMELBACK RD, SCOTTSDALE, AZ 85251</strong></li>
+                    <li>Occupation: <strong>MARKETING in SCOTTSDALE</strong></li>
+                    <li>Arrest Location: <strong> US1 78MM NB, ISLAMORADA</strong></li>
+                    <li>Arresting Officer/Agency: <strong>WARREN, BRANDON - </strong></li>
+                    <li>Incident #: <strong>MCSO18CAD156532</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008658</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 784.03.1a2 BATTERY - CAUSE BODILY HARM</strong></li>
+                         
+                            <li><strong>1 Felony Count(s) of 812.014.2c1 LARC - GRAND THEFT 300 LESS THAN 5K DOLS</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/04/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug87L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug87.jpg" alt="POLK, HERBERT GLENN Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>POLK, HERBERT GLENN</strong></span> was arrested on <strong>11/27/2018</strong> at <strong> 8:50</strong></li>
+                    <li>Date of Birth: <strong>03/30/1982</strong> Age: <strong>36</strong> Gender: <strong>M</strong> Race: <strong>B</strong></li>
+                    <li>Address: <strong> STREEETS OF KEY WEST, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>DIXON, YVONNE - MCSO - KEY WEST CORRECTIONS D WATCH</strong></li>
+                    <li>Incident #: <strong></strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 941.13 OUT-OF-STATE-FUG - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>Unknown at this time</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug88L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug88.jpg" alt="ROMAN, YIMIS MARTELL Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>ROMAN, YIMIS MARTELL</strong></span> was arrested on <strong>11/27/2018</strong> at <strong>11:29</strong></li>
+                    <li>Date of Birth: <strong>08/12/1978</strong> Age: <strong>40</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong> GARRADA LN, STOCK ISLAND, FL 33040</strong></li>
+                    <li>Occupation: <strong>FISHERMAN in STOCK ISLAND</strong></li>
+                    <li>Arrest Location: <strong>6639 MALONEY AVE, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>KWPD18OFF6575</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Felony Count(s) of 806.01.1 ARSON - 1ST DEGREE DWELLING BUILDING PEOPLE PRESENT</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/13/2018 at 08:45</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug89L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug89.jpg" alt="SCHAEFER, MATTHEW  Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>SCHAEFER, MATTHEW </strong></span> was arrested on <strong>11/27/2018</strong> at <strong>10:33</strong></li>
+                    <li>Date of Birth: <strong>11/14/1981</strong> Age: <strong>37</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>430 CLARK ST, MARSEILLES, IL 61341</strong></li>
+                    <li>Occupation: <strong>Unknown</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, STOCK ISLAND</strong></li>
+                    <li>Arresting Officer/Agency: <strong>RICE, ALVAREZ - MCSO - KEY WEST CORRECTIONS C WATCH</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 843.15.1b FAILURE TO APPEAR - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/06/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug90L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug90.jpg" alt="SHAIA, GEORGE WESLEY Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>SHAIA, GEORGE WESLEY</strong></span> was arrested on <strong>11/27/2018</strong> at <strong>20:51</strong></li>
+                    <li>Date of Birth: <strong>01/26/1967</strong> Age: <strong>51</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>31221 AVE F DOWNSTAIRS ENCLOSURE, BIG PINE KEY, FL 33043</strong></li>
+                    <li>Occupation: <strong>UNEMPLOYED</strong></li>
+                    <li>Arrest Location: <strong>31221 AVE F, BIG PINE KEY</strong></li>
+                    <li>Arresting Officer/Agency: <strong>PACIFICO, VINCE - MCSO - ROAD PATROL -</strong></li>
+                    <li>Incident #: <strong>FWSB18OFF016289</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 328.64 PUBLIC ORDER CRIMES - FAIL TO CHANGE BOAT TITL OR ADDR-WAS 327.19</strong></li>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 823.11 HEALTH-SAFETY - ABANDONED VESSEL</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/06/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug91L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug91.jpg" alt="SHEREMETT, JOSHUA PAUL Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>SHEREMETT, JOSHUA PAUL</strong></span> was arrested on <strong>11/27/2018</strong> at <strong>10:15</strong></li>
+                    <li>Date of Birth: <strong>02/14/1987</strong> Age: <strong>31</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>4984 92 AVE, COOPER CITY, FL </strong></li>
+                    <li>Occupation: <strong>CONSTRUCTION in MARATHON</strong></li>
+                    <li>Arrest Location: <strong>5501 COLLEGE RD, STOCK ISLAND</strong></li>
+                    <li>Arresting Officer/Agency: <strong>RICE, ALVAREZ - MCSO - KEY WEST CORRECTIONS C WATCH</strong></li>
+                    <li>Incident #: <strong>MCSO</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 948.06 PROB VIOLATION - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/06/2018 at 13:30</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug92L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug92.jpg" alt="TOLENTINO, RAMON REA Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>TOLENTINO, RAMON REA</strong></span> was arrested on <strong>11/27/2018</strong> at <strong>00:25</strong></li>
+                    <li>Date of Birth: <strong>08/31/1985</strong> Age: <strong>33</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>3333 DUCK AV, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>COOK in KEY WEST</strong></li>
+                    <li>Arrest Location: <strong>3333 DUCK AVE, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>KWPD18OFF006660</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 322.03.1 MOVING TRAFFIC VIOL - OPERATE MOTOR VEHICLE WO VALID LICENSE</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/06/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug93L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug93.jpg" alt="VALENCIA, ANTHONY  Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>VALENCIA, ANTHONY </strong></span> was arrested on <strong>11/27/2018</strong> at <strong>14:25</strong></li>
+                    <li>Date of Birth: <strong>04/19/1997</strong> Age: <strong>21</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong>60 6 RD, HOMESTEAD, FL 33030</strong></li>
+                    <li>Occupation: <strong>CARPENTRY</strong></li>
+                    <li>Arrest Location: <strong>53 HIGH POINT RD, PLANTATION KEY</strong></li>
+                    <li>Arresting Officer/Agency: <strong>ROZEK, JACQUES - MCSO - DIST 7 ROAD PATROL</strong></li>
+                    <li>Incident #: <strong>MCSO18CAD156696</strong>  &emsp; - &emsp; Offense #: <strong>MCSO18OFF008674</strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Unknown Count(s) of 901.04 OUT-OF-COUNTY WARRANT - </strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>Unknown at this time</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-md-3">
+                <a href="https://www.keysso.net/ArrestReports/Mug94L.jpg" target="_blank" data-toggle="tooltip" data-placement="left" title="Click to open larger picture">
+                <img class="img-thumbnail" src="https://www.keysso.net/ArrestReports/Mug94.jpg" alt="WELCH, TERENCE JAMES Mug Shot">
+                </a>
+            </div>
+            <div class="col col-md-9 text-left">
+                <ul id="arrest-list">
+                    <li><span id="arrest-name"><strong>WELCH, TERENCE JAMES</strong></span> was arrested on <strong>11/27/2018</strong> at <strong>00:49</strong></li>
+                    <li>Date of Birth: <strong>04/29/1961</strong> Age: <strong>57</strong> Gender: <strong>M</strong> Race: <strong>W</strong></li>
+                    <li>Address: <strong> STREETS OF KEY WEST, KEY WEST, FL 33040</strong></li>
+                    <li>Occupation: <strong>NONE</strong></li>
+                    <li>Arrest Location: <strong>3022 ROOSEVELT BLVD, KEY WEST</strong></li>
+                    <li>Arresting Officer/Agency: <strong>KWPD, - KWPD</strong></li>
+                    <li>Incident #: <strong>KWPD18OFF006661</strong>  &emsp; - &emsp; Offense #: <strong></strong></li>
+                    <li>Charges:</li>
+                    <ul>
+                         
+                            <li><strong>1 Misdemeanor Count(s) of 810.09.2a TRESPASSING - PROPERTY NOT STRUCTURE OR CONVEY</strong></li>
+                        
+                    </ul>
+                    <li>Arraignment: <strong>12/06/2018 at 09:00</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+
+
+    </section>
+
+
+</div>
+
+<script type="text/javascript">
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("topBtn").style.display = "block";
+        } else {
+            document.getElementById("topBtn").style.display = "none";
+        }
+    }
+    
+
+  // When the user clicks on the button, scroll to the top of the document
+    function scrollToTop(scrollDuration) {
+      var cosParameter = window.scrollY / 2,
+          scrollCount = 0,
+          oldTimestamp = performance.now();
+      function step (newTimestamp) {
+          scrollCount += Math.PI / (scrollDuration / (newTimestamp - oldTimestamp));
+          if (scrollCount >= Math.PI) window.scrollTo(0, 0);
+          if (window.scrollY === 0) return;
+          window.scrollTo(0, Math.round(cosParameter + cosParameter * Math.cos(scrollCount)));
+          oldTimestamp = newTimestamp;
+          window.requestAnimationFrame(step);
+      }
+      window.requestAnimationFrame(step);
+  }
+/* 
+    Explanations:
+    - pi is the length/end point of the cosinus intervall (see above)
+    - newTimestamp indicates the current time when callbacks queued by requestAnimationFrame begin to fire.
+      (for more information see https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame)
+    - newTimestamp - oldTimestamp equals the duration
+
+      a * cos (bx + c) + d                      | c translates along the x axis = 0
+    = a * cos (bx) + d                          | d translates along the y axis = 1 -> only positive y values
+    = a * cos (bx) + 1                          | a stretches along the y axis = cosParameter = window.scrollY / 2
+    = cosParameter + cosParameter * (cos bx)    | b stretches along the x axis = scrollCount = Math.PI / (scrollDuration / (newTimestamp - oldTimestamp))
+    = cosParameter + cosParameter * (cos scrollCount * x)
+*/    
+
+    //Popups for Warrants
+    function openPopup(popurl) {
+      window.open(popurl,'','width=250,height=200,status,scrollbars,resizable');
+    } 
+    
+    //Enable Tooltips
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+    
+    // // Homepage background image 
+    //       $("#home-page").backstretch([
+    //       "images/homePage/PatrolCar.jpg",
+    //       "images/homePage/color guard marching.JPG",
+    //       "images/homePage/trauma star.jpg",
+    //       "images/homePage/swat around car.jpg",
+    //       "images/homePage/little boy with motorcycles 2.jpg",
+    //       "images/homePage/marine unit checking boats.png"
+    //     ], {
+    //     	fade: 750,		//Speed of Fade
+    //     	duration: 4000 	//Time of image display
+    //     });
+
+    // // Careers background image 
+    //       $("#careers").backstretch([
+    //       "images/group.JPG",
+    //       "images/coral shores career day.jpg",
+    //       "images/bomb squad.jpg",
+    //       "images/dispatch.JPG",
+    //       "images/dive training.jpg",
+    //       "images/traffic group 2017.JPG",
+    //       "images/water patrol key largo.PNG"
+    //     ], {
+    //     	fade: 750,		//Speed of Fade
+    //     	duration: 4000 	//Time of image display
+    //     });
+
+    
+    //Smooth Scroll
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+    
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+          // Store hash
+          var hash = this.hash;
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+       
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+</script>
+
+
+    
+    <footer class="container text-center">
+        <h5><img src="/images/HRstar.png" alt="MCSO Star"></h5>
+        <h3>The Monroe County Sheriff's Office is a state and federally accredited law enforcement agency.</h3>
+        <img id="footer-accred-img" src="/images/Accreditation five crown-no background.gif" alt="Accredidation Logo">
+        <div class="row">
+            <div class="col-md-6">
+                <h6>Follow us:</h6>
+                <a href="http://floridakeyssheriff.blogspot.com" aria-label="MCSO Blog"><img class="footer-logo" src="/images/blogger round logo.png" alt="Blog Logo"></a>
+                <a href="https://www.facebook.com/floridakeyssheriff/" aria-label="MCSO Facebook"><img class="footer-logo" src="/images/facebook-icon-preview-200x200.png" alt="Facebook Logo"></a>
+                <a href="https://twitter.com/mcsonews" aria-label="MCSO Twitter"><img class="footer-logo" src="/images/twitter round button.png" alt="Twitter Logo"></a>
+            </div>
+            <div class="col-md-6">
+            <h6>Download our app:</h6>
+                <a href='https://itunes.apple.com/us/app/monroe-county-sheriffs-office/id794698931?mt=8' target='_blank'><img src='/images/AppleStore.png' alt='Apple Store'></a>
+                <a href='https://play.google.com/store/search?q=monroe%20county%20sheriffs%20office' target='_blank'><img src='/images/GooglePlay.png' alt='Google Play'></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-left" id="footer-policy">
+                <p>
+                    Accessibility Policy<br>
+                        Keysso.net is committed to providing access to all individuals—with or without disabilities—seeking information on Keysso.net. To provide this information, we've built Keysso.net to conform to American with Disabilities Act (as amended). The ADA requires that all individuals with disabilities have access to, and use of, information and data comparable to that provided to individuals without disabilities, unless an undue burden would be imposed on us.
+                        <br>
+                        If you use assistive technology (such as a screen reader, eye tracking device, voice recognition software, etc.) and have difficulty accessing information on Keysso.net, please contact us and provide the URL (web address) of the material you tried to access, the problem you experienced, and your contact information. We'll contact you and attempt to provide the information you're seeking.
+                        <br>
+                        You may contact us by telephone at (305) 292-7000 or via email <a href="mailto:web@keysso.net">web@keysso.net.</a>
+                </p>
+                <p>
+                    Links to Third Party Websites<br>
+                    Some pages on this website may contain links to third party sites not operated by the Monroe County Sheriff's Office. These sites may not adhere to ADA standards. The Monroe County Sheriff's Office is not responsible for the content and accessibility of those sites, their partners, or advertisers.
+                </p>
+            </div>
+        </div>
+        <p>Copyright &copy; M.C.S.O. Information Systems</p>
+    </footer>
+</body>
+</html>

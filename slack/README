@@ -1,0 +1,45 @@
+What sort of input do we need?
+
+- Invite the bot to a channel
+    This should create a queue named with our slack URL
+    https://maclawran.slack.com/ - we will publish all outgoing messages to this queue with the group-name (current-channel, user, message)
+
+- Other slack invites the bot to their channel
+    Creates another queue using their slack URL (other.slack.com)
+
+- tell NSA to link to a remote channel
+    @nsa link https://other.slack.com/DFDFDFDFG (channel ID vs name)
+    creates a table entry LOCAL-CHANNEL:REMOTE-CHANNEL
+    But that means listening on multiple queues - not sure about that unless we just use one queue and 
+    encode the message as slackinstance:group
+    but we'd need a process to watch all the incoming traffic
+    just listening to a bunch of queues might be easier but that's a lot of queues at scale
+
+    Issue is when one machine OE is linked to a pile of other machines (A B C D)
+    Then there are either 4 machine queues or one giant queue
+    And we have 2 loops - the slack group reader loop and the incoming queue reader loop
+
+
+
+    and the same on the other side.
+
+- Now we just listen on the forign queue and route messages to the right group
+    queue:group <-> queue:group
+
+
+
+- tell it to connect to a remote slack instance 
+    @nsa link remote-slack-channel
+
+    this creates 2 queues in queue-thing (redis, rabbitmq, etc)
+    Creates outbound  (current slack) A->B
+    Creates inbound  (remote slack) A<-B
+    and prints a message telling the user to install the app on the remote slack server
+    and invite the bot to the channels
+
+    bot then listens on slack for incoming messages and put them on the A->B queue
+    listens on the queue and puts incoming messages into the correct slack group
+
+    @nsa link URL
+    @nsa unlink URL
+    @nsa list-channels

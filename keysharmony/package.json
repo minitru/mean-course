@@ -1,0 +1,24 @@
+{
+  "name": "keysharmony",
+  "version": "1.0.0",
+  "description": "",
+  "main": "potusScraper.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "osmosis": "^1.1.8",
+    "puppeteer": "^1.11.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "scanf": "^1.0.2",
+    "sscanf": "^0.8.0",
+    "x-ray": "^2.3.3",
+    "x-ray-scraper": "^3.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
