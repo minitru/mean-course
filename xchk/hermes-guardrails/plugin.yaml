@@ -1,0 +1,5 @@
+name: attestation-guardrails
+version: 0.1.0
+description: "Intercept tool calls for SSH to starshout.net and request attestation approval via xChk."
+author: xchk
+kind: standalone
