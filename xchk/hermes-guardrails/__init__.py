@@ -366,6 +366,7 @@ def _create_attestation(prompt: str, target_email: str, levels: Optional[List[Di
         # Pass the levels directly — server handles team role resolution,
         # sibling creation, progressive notification, etc.
         body["levels"] = levels
+        _log_call("attestation_levels", levels=levels)
     else:
         # Fallback: single-approver self-attestation (backward compat)
         body["levels"] = [
@@ -508,6 +509,7 @@ def _require_attestation(
         prompt = f"Approve {label}?\n\n{summary}"
 
     _log_call("attestation_required", tool_name=tool_name, prompt=prompt)
+    _log_call("attestation_levels_check", levels_present=levels is not None, levels_count=len(levels) if levels else 0)
 
     att_id = _create_attestation(prompt, owner, levels=levels)
     if not att_id:
